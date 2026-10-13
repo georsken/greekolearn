@@ -213,6 +213,14 @@ tr:last-child td{border-bottom:0}
   html{scroll-behavior:auto}
 }
 
+
+.post-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.post-card{display:flex;flex-direction:column;background:#fff;border:1.5px solid var(--line);border-radius:var(--radius);padding:1.8rem;color:var(--ink);transition:transform .2s,box-shadow .2s}
+.post-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(23,23,28,.1);text-decoration:none}
+.post-card .glyph{font-family:var(--display);font-weight:800;font-size:2.4rem;color:var(--coral);line-height:1;margin-bottom:.8rem}
+.post-card p{color:var(--muted);font-size:.98rem;flex:1}
+.post-card .more{margin-top:1rem;font-weight:700;color:var(--coral-dark)}
+@media(max-width:900px){.post-cards{grid-template-columns:1fr}}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"EducationalOrganization","name":"GreekoLearn","url":"https://YOUR-USERNAME.github.io/greekolearn/","description":"Native Greek tutors and free Greek lessons for English speakers.","knowsLanguage":["en","el"]}
@@ -323,7 +331,10 @@ tr:last-child td{border-bottom:0}
   </div>
 </div></section>
 
-<section aria-labelledby="blog-title"><div class="wrap"><div class="sec-head reveal"><h2 id="blog-title">Learn more about Greek</h2><p>Guides and tips from the GreekoLearn blog. <a href="blog.html"><b>See all articles →</b></a></p></div><div class="post-cards"><a class="post-card reveal" href="blog/is-greek-hard-for-english-speakers.html"><div class="glyph">Αβ</div><h3>Is Greek Hard for English Speakers? An Honest Answer</h3><p>An honest look at what is easy and what is tricky when English speakers learn Greek, plus tips to make progress faster.</p><span class="more">Read article →</span></a><a class="post-card reveal" href="blog/learn-the-greek-alphabet.html"><div class="glyph">Αλφ</div><h3>How to Learn the Greek Alphabet in One Weekend</h3><p>A simple plan to learn all 24 Greek letters, the sounds English speakers find tricky and the common letter pairs.</p><span class="more">Read article →</span></a><a class="post-card reveal" href="blog/greek-phrases-for-travel.html"><div class="glyph">Γεια</div><h3>10 Greek Phrases to Learn Before You Travel</h3><p>Ten essential Greek phrases with pronunciation for visitors to Greece and Cyprus: greetings, ordering, directions and thanks.</p><span class="more">Read article →</span></a></div></div></section>
+<section aria-labelledby="blog-title" id="home-blog" hidden><div class="wrap">
+  <div class="sec-head"><h2 id="blog-title">Learn more about Greek</h2><p>Guides and tips from the GreekoLearn blog. <a href="blog.html"><b>See all articles →</b></a></p></div>
+  <div class="post-cards" id="home-posts"></div>
+</div></section>
 
 <section class="alt faq" id="faq" aria-labelledby="faq-title"><div class="wrap">
   <div class="sec-head reveal"><h2 id="faq-title">Questions about learning Greek</h2></div>
@@ -411,6 +422,104 @@ if(form){form.addEventListener('submit',async ev=>{
     else{status.className='err';status.textContent=data.message||'Something went wrong. Please try again.'}
   }catch(_){status.className='err';status.textContent='Network error. Please check your connection and try again.'}
   btn.disabled=false})}
+
+</script>
+<script>
+/* GreekoLearn blog loader: finds the articles in the /blog folder automatically (no build step). */
+(function(){
+'use strict';
+var CONFIG={folder:'blog',listTtlMin:5,/* only needed on a custom domain: */user:'',repo:'',branch:''};
+var KEY='greekolearn-blog-cache-v1';
+function readCache(){try{return JSON.parse(localStorage.getItem(KEY))||{}}catch(e){return {}}}
+function writeCache(c){try{localStorage.setItem(KEY,JSON.stringify(c))}catch(e){}}
+function detect(){
+  if(CONFIG.user&&CONFIG.repo)return {user:CONFIG.user,repo:CONFIG.repo,branch:CONFIG.branch};
+  var h=location.hostname;
+  if(/\.github\.io$/i.test(h)){
+    var user=h.split('.')[0],seg=location.pathname.split('/').filter(Boolean)[0];
+    var repo=(seg&&!/\.html?$/i.test(seg))?seg:user+'.github.io';
+    return {user:user,repo:repo,branch:CONFIG.branch}}
+  return null}
+function okName(n){return /\.html?$/i.test(n)&&n.charAt(0)!=='_'&&n.toLowerCase()!=='index.html'}
+function sortPosts(a){return a.slice().sort(function(x,y){
+  if(!!y.featured!==!!x.featured)return y.featured?1:-1;
+  if(x.date!==y.date)return (y.date||'').localeCompare(x.date||'');
+  return x.title.localeCompare(y.title)})}
+function cached(){var c=readCache();if(!c.files||!c.posts)return [];
+  return sortPosts(c.files.map(function(f){return c.posts[f.name]&&c.posts[f.name].data}).filter(Boolean))}
+async function listFiles(c){
+  if(c.files&&c.listAt&&Date.now()-c.listAt<CONFIG.listTtlMin*60000)return c.files;
+  var d=detect(),files=null;
+  if(d){try{
+    var url='https://api.github.com/repos/'+d.user+'/'+d.repo+'/contents/'+CONFIG.folder+(d.branch?'?ref='+d.branch:'');
+    var r=await fetch(url,{headers:{Accept:'application/vnd.github+json'}});
+    if(!r.ok)throw new Error('GitHub API '+r.status);
+    var j=await r.json();
+    files=j.filter(function(f){return f.type==='file'&&okName(f.name)}).map(function(f){return {name:f.name,sha:f.sha}})
+  }catch(e){files=null}}
+  if(!files){try{ /* plain directory listing (works when previewing locally with a simple server) */
+    var r2=await fetch(CONFIG.folder+'/');if(!r2.ok)throw new Error('listing '+r2.status);
+    var doc=new DOMParser().parseFromString(await r2.text(),'text/html'),seen={};
+    files=[].slice.call(doc.querySelectorAll('a[href]')).map(function(a){return a.getAttribute('href')})
+      .filter(function(h){return h&&!/^(\.\.|\/|https?:|#|\?)/.test(h)})
+      .map(function(h){try{return decodeURIComponent(h.split('?')[0].split('#')[0])}catch(e){return h}})
+      .filter(function(n){if(!okName(n)||seen[n])return false;seen[n]=1;return true}).map(function(n){return {name:n,sha:''}});
+    if(!files.length)files=null
+  }catch(e){files=null}}
+  if(files){c.files=files;c.listAt=Date.now();return files}
+  if(c.files)return c.files;           /* offline / rate limited: show what we remember */
+  throw new Error('Could not read the blog folder')}
+function words(el){if(!el)return 0;var cl=el.cloneNode(true);
+  [].slice.call(cl.querySelectorAll('script,style,nav,header,footer,noscript')).forEach(function(n){n.remove()});
+  var t=(cl.textContent||'').trim();return t?t.split(/\s+/).length:0}
+async function loadPost(f,c){
+  var old=c.posts[f.name];
+  if(old&&f.sha&&old.sha===f.sha)return old.data;
+  var rel=CONFIG.folder+'/'+encodeURIComponent(f.name);
+  var r=await fetch(rel);if(!r.ok)throw new Error(f.name+' '+r.status);
+  var lm=r.headers&&r.headers.get&&r.headers.get('last-modified');
+  var doc=new DOMParser().parseFromString(await r.text(),'text/html');
+  function m(n){var e=doc.querySelector('meta[name="'+n+'"],meta[property="'+n+'"]');return e?(e.getAttribute('content')||'').trim():''}
+  var h1=doc.querySelector('h1');
+  var title=(m('og:title')||(h1&&h1.textContent.trim())||doc.title||f.name.replace(/\.html?$/i,'').replace(/-/g,' ')).replace(/\s*[|\-–—]\s*GreekoLearn\s*$/i,'').trim();
+  var art=doc.querySelector('article')||doc.querySelector('main')||doc.body;
+  var desc=m('description')||m('og:description');
+  if(!desc){var ps=[].slice.call(art.querySelectorAll('p')).map(function(p){return p.textContent.trim()}).filter(function(t){return t.length>60});desc=ps[0]||''}
+  desc=desc.replace(/\s+/g,' ');if(desc.length>170)desc=desc.slice(0,167).replace(/\s+\S*$/,'')+'…';
+  var date='',cands=[m('date'),m('article:published_time'),(doc.querySelector('time[datetime]')||{getAttribute:function(){return ''}}).getAttribute('datetime')];
+  [].slice.call(doc.querySelectorAll('script[type="application/ld+json"]')).forEach(function(s){try{var j=JSON.parse(s.textContent);(Array.isArray(j)?j:[j]).forEach(function(i){if(i&&i.datePublished)cands.push(i.datePublished)})}catch(e){}});
+  for(var i=0;i<cands.length&&!date;i++){var mm=/^(\d{4})-(\d{2})-(\d{2})/.exec((cands[i]||'').trim());if(mm)date=mm[0]}
+  if(!date&&lm){var dd=new Date(lm);if(!isNaN(dd))date=dd.toISOString().slice(0,10)}
+  var img=m('og:image');
+  if(img&&/(^|\/)og-image\.png$/i.test(img))img='';
+  if(img){try{img=new URL(img,new URL(rel,location.href)).href}catch(e){img=''}}
+  var data={file:f.name,url:rel,title:title,desc:desc,date:date,cat:m('category')||m('article:section')||'Learning Greek',
+    img:img,mins:Math.max(1,Math.round(words(art)/200)),featured:m('featured').toLowerCase()==='true'};
+  c.posts[f.name]={sha:f.sha,data:data};return data}
+async function fetchAll(){
+  var c=readCache();c.posts=c.posts||{};
+  var files=await listFiles(c),out=[],i=0;
+  async function worker(){while(i<files.length){var f=files[i++];try{out.push(await loadPost(f,c))}catch(e){if(c.posts[f.name]&&c.posts[f.name].data)out.push(c.posts[f.name].data)}}}
+  await Promise.all([worker(),worker(),worker(),worker(),worker(),worker()]);
+  var keep={};files.forEach(function(f){keep[f.name]=1});Object.keys(c.posts).forEach(function(k){if(!keep[k])delete c.posts[k]});
+  writeCache(c);return sortPosts(out)}
+window.GLBlog={cached:cached,fetchAll:fetchAll,config:CONFIG};
+})();
+
+</script>
+<script>
+(function(){
+var sec=document.getElementById('home-blog'),box=document.getElementById('home-posts');if(!sec||!window.GLBlog)return;
+var G=['Αα','Ββ','Γγ','Δδ','Εε','Ζζ','Ηη','Θθ','Ιι','Κκ','Λλ','Μμ','Νν','Ξξ','Οο','Ππ','Ρρ','Σσ','Ττ','Φφ','Χχ','Ψψ','Ωω'];
+function draw(list){if(!list.length)return;box.replaceChildren();
+  list.slice(0,3).forEach(function(p){
+    var a=document.createElement('a');a.className='post-card';a.href=p.url;
+    var g=document.createElement('div');g.className='glyph';g.textContent=G[[].reduce.call(p.file,function(s,c){return s+c.charCodeAt(0)},0)%G.length];
+    var t=document.createElement('h3');t.textContent=p.title;var d=document.createElement('p');d.textContent=p.desc;
+    var m=document.createElement('span');m.className='more';m.textContent='Read article →';
+    a.append(g,t,d,m);box.append(a)});sec.hidden=false}
+var c=GLBlog.cached();if(c.length)draw(c);
+GLBlog.fetchAll().then(draw).catch(function(){})})();
 
 </script>
 </body>
