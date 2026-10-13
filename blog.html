@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Greek Learning Blog: Guides, Tips and Culture | GreekoLearn</title>
+<meta name="description" content="Articles for English speakers learning Greek: alphabet and pronunciation guides, vocabulary, grammar help, travel phrases and study tips from GreekoLearn.">
+<link rel="canonical" href="https://YOUR-USERNAME.github.io/greekolearn/blog.html">
+<meta name="theme-color" content="#EB6345">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GreekoLearn blog: guides and tips for learning Greek">
+<meta property="og:description" content="Alphabet guides, travel phrases, grammar help and study tips for English speakers learning Greek.">
+<meta property="og:image" content="https://YOUR-USERNAME.github.io/greekolearn/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%23EB6345'/><text x='50' y='72' font-size='64' font-weight='800' text-anchor='middle' fill='white' font-family='sans-serif'>Α</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --coral:#EB6345;--coral-dark:#D4502F;--ink:#17171C;--white:#fff;--peach:#FFF0EB;--sand:#F8F6F3;
+  --muted:#6A6A74;--line:#E9E5E1;--radius:24px;
+  --display:"Bricolage Grotesque",system-ui,sans-serif;--body:"DM Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:var(--body);color:var(--ink);background:var(--white);line-height:1.65;font-size:1.05rem;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+a{color:var(--coral-dark);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1160px,92%);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);line-height:1.08;letter-spacing:-.025em}
+h1{font-size:clamp(2.6rem,6vw,4.9rem);font-weight:800}
+h2{font-size:clamp(2rem,4vw,3.1rem);font-weight:800;margin-bottom:.5em}
+h3{font-size:1.35rem;font-weight:700;margin-bottom:.35em}
+p{max-width:62ch}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:.6rem 1rem;border-radius:8px;z-index:100}
+.skip:focus{left:8px}
+#progress{position:fixed;top:0;left:0;height:4px;width:0;background:var(--coral);z-index:80}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .2s}
+.nav.scrolled{border-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-family:var(--display);font-weight:800;font-size:1.55rem;color:var(--ink);letter-spacing:-.04em}
+.logo span{color:var(--coral)}
+.logo:hover{text-decoration:none}
+.nav ul{display:flex;gap:1.9rem;list-style:none;align-items:center}
+.nav ul a{color:var(--ink);font-weight:500;font-size:.98rem}
+.btn{display:inline-block;background:var(--coral);color:#fff!important;font-weight:700;padding:.9rem 1.7rem;border-radius:999px;border:0;cursor:pointer;font:inherit;font-weight:700;transition:transform .15s,background .15s}
+.btn:hover{background:var(--coral-dark);transform:translateY(-2px);text-decoration:none}
+.btn.dark{background:var(--ink)}.btn.dark:hover{background:#000}
+.btn.sun{background:#fff;color:var(--ink)!important}.btn.sun:hover{background:var(--peach)}
+.btn.ghost{background:transparent;color:var(--ink)!important;border:2px solid var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff!important}
+.menu-btn{display:none;background:none;border:0;font-size:1.7rem;cursor:pointer;color:var(--ink)}
+
+/* hero */
+.hero{position:relative;padding:5rem 0 5.5rem;overflow:hidden;background:linear-gradient(180deg,var(--peach),#fff 85%)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+.hero p.lead{font-size:1.25rem;color:var(--muted);margin:1.4rem 0 2rem}
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap}
+.hero-note{margin-top:1.4rem;font-size:.95rem;color:var(--muted)}
+.chat{background:#fff;border-radius:28px;padding:1.4rem;box-shadow:0 30px 70px rgba(23,23,28,.14);display:grid;gap:.9rem;position:relative}
+.chat-head{display:flex;gap:.8rem;align-items:center;padding-bottom:.9rem;border-bottom:1px solid var(--line)}
+.avatar{width:44px;height:44px;border-radius:50%;background:var(--coral);color:#fff;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:1.3rem}
+.chat-head b{display:block;line-height:1.2}.chat-head small{color:var(--muted)}
+.bubble{padding:.8rem 1.1rem;border-radius:18px;max-width:88%;font-size:.98rem;line-height:1.45}
+.bubble.me{background:var(--sand);justify-self:end;border-bottom-right-radius:4px}
+.bubble.tutor{background:var(--peach);border-bottom-left-radius:4px}
+.bubble.tutor b{font-family:var(--display);font-size:1.15rem;color:var(--coral-dark)}
+.chat .bubble{opacity:0;transform:translateY(10px);animation:pop .5s forwards}
+.chat .bubble:nth-of-type(1){animation-delay:.4s}.chat .bubble:nth-of-type(2){animation-delay:1.4s}.chat .bubble:nth-of-type(3){animation-delay:2.4s}
+@keyframes pop{to{opacity:1;transform:none}}
+.badge{position:absolute;right:-12px;top:-14px;background:var(--ink);color:#fff;border-radius:999px;padding:.4rem 1rem;font-size:.85rem;font-weight:700;transform:rotate(4deg)}
+
+/* sections */
+section{padding:6rem 0}
+.sec-head{margin-bottom:3rem}
+.sec-head.center{text-align:center}.sec-head.center p{margin-inline:auto}
+.sec-head p{color:var(--muted);font-size:1.15rem}
+.alt{background:var(--sand)}
+
+/* sliding panels */
+.slider{overflow:hidden;padding:.6rem 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.track{display:flex;gap:1.1rem;width:max-content;animation:left 45s linear infinite}
+.slider.rev .track{animation-name:right;animation-duration:55s}
+.slider:hover .track{animation-play-state:paused}
+@keyframes left{to{transform:translateX(-50%)}}
+@keyframes right{from{transform:translateX(-50%)}to{transform:none}}
+.word{width:230px;flex:none;border-radius:22px;padding:1.4rem;background:var(--coral);color:#fff}
+.word:nth-child(4n+2){background:var(--ink)}
+.word:nth-child(4n+3){background:var(--peach);color:var(--ink)}
+.word:nth-child(4n+4){background:#fff;color:var(--ink);border:1.5px solid var(--line)}
+.word b{display:block;font-family:var(--display);font-size:2rem;line-height:1.1;margin-bottom:.5rem}
+.word i{display:block;font-style:normal;opacity:.85;font-size:.95rem}
+.word span{display:inline-block;margin-top:.8rem;font-size:.82rem;font-weight:700;background:rgba(255,255,255,.2);padding:.15rem .7rem;border-radius:999px}
+.word:nth-child(4n+3) span,.word:nth-child(4n+4) span{background:var(--sand)}
+.way{width:320px;flex:none;border-radius:22px;padding:1.6rem;background:#fff;border:1.5px solid var(--line)}
+.way .ico{display:grid;place-items:center;width:48px;height:48px;border-radius:14px;background:var(--peach);font-family:var(--display);font-weight:800;color:var(--coral-dark);font-size:1.4rem;margin-bottom:1rem}
+.way p{color:var(--muted);font-size:.98rem}
+.slider-label{margin:2.4rem 0 .6rem;font-family:var(--display);font-weight:700;font-size:1.15rem}
+
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:1.1rem}
+.tile{border-radius:var(--radius);padding:2rem;min-height:250px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
+.tile p{opacity:.9;font-size:1rem}
+.t1{grid-column:span 4;background:var(--coral);color:#fff}
+.t2{grid-column:span 2;background:var(--ink);color:#fff}
+.t3{grid-column:span 2;background:var(--peach)}
+.t4{grid-column:span 4;background:#fff;border:1.5px solid var(--line)}
+.tile .big{position:absolute;right:1.4rem;top:.4rem;font-family:var(--display);font-weight:800;font-size:7.5rem;line-height:1;opacity:.18}
+.t4 .big{color:var(--coral);opacity:.25}
+
+/* steps */
+.step-row{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;padding:3.2rem 0}
+.step-row+.step-row{border-top:1px solid var(--line)}
+.step-row:nth-child(even) .step-text{order:2}
+.num{display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:var(--coral);color:#fff;font-family:var(--display);font-weight:800;font-size:1.6rem;margin-bottom:1.2rem}
+.step-text p{color:var(--muted);margin-bottom:1.5rem}
+.mock{background:var(--sand);border-radius:var(--radius);padding:1.8rem;display:grid;gap:.9rem}
+.mock .card{background:#fff;border-radius:16px;padding:1rem 1.2rem;box-shadow:0 8px 24px rgba(23,23,28,.07);display:flex;justify-content:space-between;align-items:center;gap:1rem;font-weight:500}
+.pbar{height:10px;border-radius:10px;background:var(--line);overflow:hidden}
+.pbar i{display:block;height:100%;width:50%;background:var(--coral);border-radius:10px}
+.pill{background:var(--peach);color:var(--coral-dark);font-weight:700;font-size:.85rem;padding:.25rem .8rem;border-radius:999px;white-space:nowrap}
+.slot{border:2px solid var(--line);background:#fff;border-radius:14px;padding:.9rem 1.2rem;display:flex;justify-content:space-between;font-weight:700}
+.slot.on{border-color:var(--coral);background:var(--peach)}
+
+/* free courses banner */
+.banner{background:var(--coral);color:#fff;border-radius:36px;padding:4rem;display:grid;grid-template-columns:1.3fr .7fr;gap:2rem;align-items:center;position:relative;overflow:hidden}
+.banner p{color:#fff;opacity:.92;margin-bottom:1.6rem}
+.banner .g{font-family:var(--display);font-weight:800;font-size:9rem;line-height:1;opacity:.25;text-align:center}
+.banner h2{color:#fff}
+
+/* faq */
+.faq details{border-bottom:1px solid var(--line);padding:1.3rem 0}
+.faq summary{cursor:pointer;font-family:var(--display);font-weight:700;font-size:1.25rem;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.8rem;line-height:1;color:var(--coral);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{margin-top:.8rem;color:var(--muted)}
+
+/* contact */
+.contact{background:var(--ink);color:#fff}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start}
+.contact p{color:#CFCFD6}
+.checks{list-style:none;margin:1.4rem 0 2rem}
+.checks li{padding-left:2rem;position:relative;margin-bottom:.7rem}
+.checks li::before{content:"";position:absolute;left:0;top:.45em;width:1.1rem;height:1.1rem;border-radius:50%;background:var(--coral)}
+.checks li::after{content:"";position:absolute;left:.37rem;top:.62em;width:.35rem;height:.6rem;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+form{background:#fff;color:var(--ink);padding:2rem;border-radius:28px;display:grid;gap:1.1rem}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+label{display:grid;gap:.35rem;font-weight:700;font-size:.92rem}
+input,select,textarea{font:inherit;font-weight:400;padding:.8rem 1rem;border:1.5px solid var(--line);border-radius:12px;background:var(--sand);color:var(--ink);width:100%}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--coral);background:#fff}
+textarea{min-height:100px;resize:vertical}
+.hp{position:absolute;left:-9999px}
+#form-status{font-weight:700;min-height:1.4em}
+#form-status.ok{color:#1E8A55}#form-status.err{color:#C0392B}
+.fine{font-size:.82rem;color:var(--muted)!important}
+
+footer{background:#0E0E12;color:#A9A9B3;padding:3rem 0;font-size:.95rem}
+footer .wrap{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+footer a{color:#E4E4EA}
+footer ul{list-style:none;display:flex;gap:1.4rem;flex-wrap:wrap}
+
+/* courses page */
+.page-hero{background:linear-gradient(180deg,var(--peach),#fff);padding:4.5rem 0 3rem}
+.page-hero p{color:var(--muted);font-size:1.2rem;margin-top:1rem}
+.toc{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:2rem}
+.toc a{background:#fff;border:1.5px solid var(--line);color:var(--ink);padding:.5rem 1rem;border-radius:999px;font-weight:500;font-size:.95rem}
+.toc a:hover{background:var(--coral);border-color:var(--coral);color:#fff;text-decoration:none}
+.lesson{padding:4rem 0;border-bottom:1px solid var(--line)}
+.lesson:nth-of-type(even){background:var(--sand)}
+.lesson .meta{display:flex;gap:.6rem;margin-bottom:1rem;flex-wrap:wrap}
+.lesson .intro{color:var(--muted);margin-bottom:2rem}
+.tag{display:inline-block;font-size:.82rem;font-weight:700;background:var(--peach);color:var(--coral-dark);padding:.2rem .7rem;border-radius:999px}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+th,td{text-align:left;padding:.85rem 1.1rem;border-bottom:1px solid var(--line)}
+th{background:var(--peach);font-family:var(--display);font-size:.95rem}
+td.gr{font-family:var(--display);font-weight:700;font-size:1.25rem;color:var(--coral-dark)}
+tr:last-child td{border-bottom:0}
+.table-scroll{overflow-x:auto}
+.tip{margin-top:1.5rem;background:var(--peach);border-left:5px solid var(--coral);padding:1rem 1.3rem;border-radius:0 14px 14px 0;max-width:70ch}
+.cta-band{background:var(--coral);color:#fff;text-align:center;padding:4.5rem 0}
+.cta-band h2{color:#fff}
+.cta-band p{margin:0 auto 1.8rem;color:#fff;opacity:.92}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:900px){
+  .hero .wrap,.split,.step-row,.banner{grid-template-columns:1fr}
+  .step-row:nth-child(even) .step-text{order:0}
+  .step-row{gap:2rem}
+  .bento{grid-template-columns:1fr}
+  .t1,.t2,.t3,.t4{grid-column:auto;min-height:200px}
+  .row{grid-template-columns:1fr}
+  .banner{padding:2.5rem}.banner .g{display:none}
+  .menu-btn{display:block}
+  .nav ul{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;flex-direction:column;padding:1.5rem;gap:1.2rem;border-bottom:1px solid var(--line)}
+  .nav ul.open{display:flex}
+  section{padding:4rem 0}
+  .badge{right:8px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal,.chat .bubble{opacity:1;transform:none}
+  .slider{overflow-x:auto;-webkit-mask-image:none;mask-image:none}
+  html{scroll-behavior:auto}
+}
+
+/* articles & simple pages */
+.article{padding:4rem 0 5rem}
+.article .wrap{width:min(780px,92%)}
+.article h1{font-size:clamp(2.2rem,5vw,3.4rem);margin:.6rem 0 1rem}
+.article h2{font-size:1.7rem;margin:2.4rem 0 .6rem}
+.article p,.article li{max-width:none;margin-bottom:1rem;font-size:1.1rem}
+.article ul,.article ol{padding-left:1.4rem;margin-bottom:1rem}
+.article .byline{color:var(--muted);font-size:.95rem}
+.crumbs{font-size:.92rem;color:var(--muted)}
+.post-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.post-card{display:flex;flex-direction:column;background:#fff;border:1.5px solid var(--line);border-radius:var(--radius);padding:1.8rem;color:var(--ink);transition:transform .2s,box-shadow .2s}
+.post-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(23,23,28,.1);text-decoration:none}
+.post-card .glyph{font-family:var(--display);font-weight:800;font-size:2.4rem;color:var(--coral);line-height:1;margin-bottom:.8rem}
+.post-card p{color:var(--muted);font-size:.98rem;flex:1}
+.post-card .more{margin-top:1rem;font-weight:700;color:var(--coral-dark)}
+.center-page{min-height:60vh;display:grid;place-items:center;text-align:center;padding:5rem 0}
+.center-page .g{font-family:var(--display);font-weight:800;font-size:8rem;color:var(--coral);line-height:1}
+@media(max-width:900px){.post-cards{grid-template-columns:1fr}}
+
+
+/* ===== blog page ===== */
+.blog-hero{padding:4rem 0 2rem}
+.blog-hero h1{font-size:clamp(2.4rem,5.5vw,4rem)}
+.b-tools{margin-top:1.6rem;max-width:560px}
+.b-search input{width:100%;font:inherit;font-size:1.05rem;padding:1rem 1.2rem 1rem 3rem;border:2px solid var(--line);border-radius:999px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%236A6A74' stroke-width='2.4' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M20 20l-3.5-3.5'/%3E%3C/svg%3E") no-repeat 1.1rem center;color:var(--ink)}
+.b-search input:focus{outline:none;border-color:var(--coral)}
+.sr{position:absolute;left:-9999px}
+.b-cats{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.4rem}
+.cat{font:inherit;font-weight:700;font-size:.95rem;padding:.5rem 1rem;border-radius:999px;border:2px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;transition:background .15s,border-color .15s}
+.cat span{opacity:.55;font-weight:500;margin-left:.2rem}
+.cat:hover{border-color:var(--coral)}
+.cat[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.b-list{padding:2rem 0 5rem}
+#b-count{color:var(--muted);margin-bottom:1.4rem;font-weight:500}
+.b-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+.post[hidden]{display:none}
+.post{background:#fff;border:1.5px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .2s,box-shadow .2s}
+.post:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(23,23,28,.1)}
+.post-link{display:flex;flex-direction:column;height:100%;color:var(--ink)}
+.post-link:hover{text-decoration:none}
+.post-media{aspect-ratio:16/9;background:var(--peach);overflow:hidden}
+.post-media img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.post:hover .post-media img{transform:scale(1.05)}
+.tile{height:100%;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:5rem;letter-spacing:-.03em}
+.tile.t0{background:var(--coral);color:rgba(255,255,255,.9)}
+.tile.t1{background:var(--ink);color:var(--coral)}
+.tile.t2{background:var(--peach);color:var(--coral-dark)}
+.post-body{padding:1.5rem;display:flex;flex-direction:column;flex:1}
+.post-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .8rem;font-size:.85rem;color:var(--muted);margin-bottom:.8rem}
+.post-body h2{font-size:1.35rem;line-height:1.2;margin:0 0 .6rem}
+.post-body p{color:var(--muted);font-size:.98rem;flex:1;margin-bottom:1rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.post .more{font-weight:700;color:var(--coral-dark)}
+.post.feat{grid-column:1/-1}
+.post.feat .post-link{flex-direction:row}
+.post.feat .post-media{aspect-ratio:auto;flex:1.15;min-height:340px}
+.post.feat .post-body{flex:1;padding:2.4rem;justify-content:center}
+.post.feat h2{font-size:clamp(1.8rem,3vw,2.5rem)}
+.post.feat .post-body p{-webkit-line-clamp:5;font-size:1.08rem}
+.post.feat .tile{font-size:9rem}
+.b-more{text-align:center;margin-top:2.4rem}
+#b-empty{text-align:center;padding:3rem 0;color:var(--muted);font-size:1.1rem}
+#b-empty[hidden],.b-more[hidden]{display:none}
+@media(max-width:900px){
+  .b-grid{grid-template-columns:1fr}
+  .post.feat .post-link{flex-direction:column}
+  .post.feat .post-media{min-height:0;aspect-ratio:16/9}
+  .post.feat .post-body{padding:1.5rem}
+  .post.feat .tile{font-size:5rem}
+}
+</style>
+
+</head>
+<body>
+<div id="progress" aria-hidden="true"></div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav"><div class="wrap">
+<a class="logo" href="index.html" aria-label="GreekoLearn home">Greeko<span>Learn</span></a>
+<button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">☰</button>
+<nav aria-label="Main"><ul>
+<li><a href="courses.html">Free courses</a></li>
+<li><a href="blog.html">Blog</a></li>
+<li><a href="index.html#how">How it works</a></li>
+<li><a href="index.html#faq">FAQ</a></li>
+<li><a class="btn" href="index.html#contact">Find a tutor</a></li>
+</ul></nav></div></header>
+<main id="main">
+<section class="page-hero blog-hero"><div class="wrap">
+<h1>The GreekoLearn blog</h1>
+<p>Guides, tips and cultural insights to help you learn Greek faster.</p>
+<div class="b-tools"><label class="b-search"><span class="sr">Search articles</span><input type="search" id="q" placeholder="Search articles" autocomplete="off"></label></div>
+<div class="b-cats" role="group" aria-label="Filter by category">
+<!-- CATS:START -->
+<button type="button" class="cat" data-cat="All" aria-pressed="true">All <span>3</span></button>
+<button type="button" class="cat" data-cat="Alphabet and pronunciation" aria-pressed="false">Alphabet and pronunciation <span>1</span></button>
+<button type="button" class="cat" data-cat="Learning tips" aria-pressed="false">Learning tips <span>1</span></button>
+<button type="button" class="cat" data-cat="Travel Greek" aria-pressed="false">Travel Greek <span>1</span></button>
+<!-- CATS:END -->
+</div>
+</div></section>
+
+<section class="b-list"><div class="wrap">
+<p id="b-count" role="status" aria-live="polite"></p>
+<div class="b-grid" id="grid">
+<!-- POSTS:START -->
+<article class="post feat" data-cat="Learning tips" data-date="2026-10-13" data-search="is greek hard for english speakers? an honest answer an honest look at what is easy and what is tricky when english speakers learn greek, plus tips to make progress faster. learning tips">
+  <a class="post-link" href="blog/is-greek-hard-for-english-speakers.html">
+    <div class="post-media"><div class="tile t0" aria-hidden="true">Κκ</div></div>
+    <div class="post-body">
+      <div class="post-meta"><span class="tag">Learning tips</span><time datetime="2026-10-13">13 Oct 2026</time><span>1 min read</span></div>
+      <h2>Is Greek Hard for English Speakers? An Honest Answer</h2>
+      <p>An honest look at what is easy and what is tricky when English speakers learn Greek, plus tips to make progress faster.</p>
+      <span class="more">Read article →</span>
+    </div>
+  </a>
+</article>
+<article class="post" data-cat="Alphabet and pronunciation" data-date="2026-10-06" data-search="how to learn the greek alphabet in one weekend a simple plan to learn all 24 greek letters, the sounds english speakers find tricky and the common letter pairs. alphabet and pronunciation">
+  <a class="post-link" href="blog/learn-the-greek-alphabet.html">
+    <div class="post-media"><div class="tile t1" aria-hidden="true">Ωω</div></div>
+    <div class="post-body">
+      <div class="post-meta"><span class="tag">Alphabet and pronunciation</span><time datetime="2026-10-06">6 Oct 2026</time><span>1 min read</span></div>
+      <h2>How to Learn the Greek Alphabet in One Weekend</h2>
+      <p>A simple plan to learn all 24 Greek letters, the sounds English speakers find tricky and the common letter pairs.</p>
+      <span class="more">Read article →</span>
+    </div>
+  </a>
+</article>
+<article class="post" data-cat="Travel Greek" data-date="2026-09-29" data-search="10 greek phrases to learn before you travel ten essential greek phrases with pronunciation for visitors to greece and cyprus: greetings, ordering, directions and thanks. travel greek">
+  <a class="post-link" href="blog/greek-phrases-for-travel.html">
+    <div class="post-media"><div class="tile t2" aria-hidden="true">Ιι</div></div>
+    <div class="post-body">
+      <div class="post-meta"><span class="tag">Travel Greek</span><time datetime="2026-09-29">29 Sep 2026</time><span>1 min read</span></div>
+      <h2>10 Greek Phrases to Learn Before You Travel</h2>
+      <p>Ten essential Greek phrases with pronunciation for visitors to Greece and Cyprus: greetings, ordering, directions and thanks.</p>
+      <span class="more">Read article →</span>
+    </div>
+  </a>
+</article>
+<!-- POSTS:END -->
+</div>
+<div id="b-empty" hidden><p style="margin:0 auto 1rem">No articles match your search.</p><button type="button" class="btn ghost small" id="reset-filters">Clear filters</button></div>
+<div class="b-more" id="more-wrap" hidden><button type="button" class="btn ghost" id="more">Show more articles</button></div>
+</div></section>
+
+<section class="cta-band"><div class="wrap">
+<h2>Learn Greek, not just about Greek</h2>
+<p style="margin-inline:auto">Try the free interactive course, then get matched with a native Greek tutor.</p>
+<a class="btn sun" href="course-introduction-to-greek.html">Start the free course</a>
+</div></section>
+<!-- LD:START -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Blog", "name": "GreekoLearn blog", "url": "https://YOUR-USERNAME.github.io/greekolearn/blog.html", "blogPost": [{"@type": "BlogPosting", "headline": "Is Greek Hard for English Speakers? An Honest Answer", "description": "An honest look at what is easy and what is tricky when English speakers learn Greek, plus tips to make progress faster.", "datePublished": "2026-10-13", "url": "https://YOUR-USERNAME.github.io/greekolearn/blog/is-greek-hard-for-english-speakers.html"}, {"@type": "BlogPosting", "headline": "How to Learn the Greek Alphabet in One Weekend", "description": "A simple plan to learn all 24 Greek letters, the sounds English speakers find tricky and the common letter pairs.", "datePublished": "2026-10-06", "url": "https://YOUR-USERNAME.github.io/greekolearn/blog/learn-the-greek-alphabet.html"}, {"@type": "BlogPosting", "headline": "10 Greek Phrases to Learn Before You Travel", "description": "Ten essential Greek phrases with pronunciation for visitors to Greece and Cyprus: greetings, ordering, directions and thanks.", "datePublished": "2026-09-29", "url": "https://YOUR-USERNAME.github.io/greekolearn/blog/greek-phrases-for-travel.html"}]}</script>
+<!-- LD:END -->
+</main>
+<footer><div class="wrap">
+<div><a class="logo" style="color:#fff" href="index.html">Greeko<span>Learn</span></a><p style="margin-top:.5rem">Learn Greek with free lessons and real tutors.</p></div>
+<ul><li><a href="courses.html">Free courses</a></li><li><a href="blog.html">Blog</a></li><li><a href="index.html#contact">Find a tutor</a></li><li><a href="privacy.html">Privacy</a></li></ul>
+<p>© <span id="y">2026</span> GreekoLearn</p></div></footer>
+<script>
+// Mobile menu
+const menuBtn=document.querySelector('.menu-btn'),menu=document.querySelector('.nav ul');
+if(menuBtn){menuBtn.addEventListener('click',()=>{const o=menu.classList.toggle('open');menuBtn.setAttribute('aria-expanded',o)});
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')))}
+
+// Nav border + scroll progress bar
+const nav=document.querySelector('.nav'),bar=document.getElementById('progress');
+function onScroll(){nav.classList.toggle('scrolled',scrollY>10);
+  if(bar){const h=document.documentElement.scrollHeight-innerHeight;bar.style.width=(h>0?scrollY/h*100:0)+'%'}}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+// Scroll reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// Sliding panels: duplicate content once for a seamless loop
+document.querySelectorAll('.track').forEach(t=>{
+  const clones=[...t.children].map(c=>{const n=c.cloneNode(true);n.setAttribute('aria-hidden','true');return n});
+  clones.forEach(c=>t.appendChild(c))});
+
+// Timezone auto-detect
+const tz=document.getElementById('timezone');
+function setTz(){try{tz.value=Intl.DateTimeFormat().resolvedOptions().timeZone}catch(_){}}
+if(tz)setTz();
+const y=document.getElementById('y');if(y)y.textContent=new Date().getFullYear();
+
+// Web3Forms submit
+const form=document.getElementById('lesson-form');
+if(form){form.addEventListener('submit',async ev=>{
+  ev.preventDefault();
+  const status=document.getElementById('form-status'),btn=form.querySelector('button[type=submit]');
+  status.className='';status.textContent='Sending…';btn.disabled=true;
+  try{
+    const res=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)});
+    const data=await res.json();
+    if(data.success){status.className='ok';status.textContent='Thank you! We will email you within 48 hours to match you with a tutor.';form.reset();setTz()}
+    else{status.className='err';status.textContent=data.message||'Something went wrong. Please try again.'}
+  }catch(_){status.className='err';status.textContent='Network error. Please check your connection and try again.'}
+  btn.disabled=false})}
+
+</script>
+
+<script>
+(function(){
+  const grid=document.getElementById('grid');if(!grid)return;
+  const cards=[...grid.querySelectorAll('.post')],PAGE=9;
+  const fold=s=>s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+  const qIn=document.getElementById('q'),count=document.getElementById('b-count'),empty=document.getElementById('b-empty'),
+        moreWrap=document.getElementById('more-wrap'),more=document.getElementById('more'),chips=[...document.querySelectorAll('.cat')];
+  const params=new URLSearchParams(location.search);
+  let cat=params.get('cat')||'All',q=fold(params.get('q')||''),shown=PAGE;
+  if(!chips.some(c=>c.dataset.cat===cat))cat='All';
+  qIn.value=params.get('q')||'';
+  function apply(){
+    const m=cards.filter(c=>(cat==='All'||c.dataset.cat===cat)&&(!q||c.dataset.search.includes(q)));
+    cards.forEach(c=>{c.hidden=true;c.classList.remove('feat')});
+    m.slice(0,shown).forEach(c=>c.hidden=false);
+    if(!q&&cat==='All'&&m.length>1&&m[0])m[0].classList.add('feat');
+    chips.forEach(c=>c.setAttribute('aria-pressed',String(c.dataset.cat===cat)));
+    count.textContent=m.length?('Showing '+Math.min(shown,m.length)+' of '+m.length+' article'+(m.length>1?'s':'')):'';
+    empty.hidden=m.length>0;moreWrap.hidden=shown>=m.length;
+    const u=new URLSearchParams();if(cat!=='All')u.set('cat',cat);if(qIn.value.trim())u.set('q',qIn.value.trim());
+    history.replaceState(null,'',u.toString()?'?'+u:location.pathname)}
+  chips.forEach(c=>c.addEventListener('click',()=>{cat=c.dataset.cat;shown=PAGE;apply()}));
+  qIn.addEventListener('input',()=>{q=fold(qIn.value.trim());shown=PAGE;apply()});
+  more.addEventListener('click',()=>{shown+=PAGE;apply()});
+  document.getElementById('reset-filters').addEventListener('click',()=>{cat='All';q='';qIn.value='';shown=PAGE;apply()});
+  apply();
+})();
+</script>
+</body>
+</html>
