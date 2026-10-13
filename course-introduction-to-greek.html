@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Introduction to Greek: Free Interactive Course for Beginners | Alphabeta</title>
+<meta name="description" content="Free interactive Greek course for English speakers. Learn the Greek alphabet with audio, read real words, greet people and count to ten in about 45 minutes.">
+<link rel="canonical" href="https://YOUR-USERNAME.github.io/alphabeta/course-introduction-to-greek.html">
+<meta name="theme-color" content="#EB6345">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Introduction to Greek: Free Interactive Course for Beginners | Alphabeta">
+<meta property="og:description" content="Free interactive Greek course for English speakers. Learn the Greek alphabet with audio, read real words, greet people and count to ten in about 45 minutes.">
+<meta property="og:url" content="https://YOUR-USERNAME.github.io/alphabeta/course-introduction-to-greek.html">
+<meta property="og:image" content="https://YOUR-USERNAME.github.io/alphabeta/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%23EB6345'/><text x='50' y='72' font-size='64' font-weight='800' text-anchor='middle' fill='white' font-family='sans-serif'>Α</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --coral:#EB6345;--coral-dark:#D4502F;--ink:#17171C;--white:#fff;--peach:#FFF0EB;--sand:#F8F6F3;
+  --muted:#6A6A74;--line:#E9E5E1;--radius:24px;
+  --display:"Bricolage Grotesque",system-ui,sans-serif;--body:"DM Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:var(--body);color:var(--ink);background:var(--white);line-height:1.65;font-size:1.05rem;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+a{color:var(--coral-dark);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1160px,92%);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);line-height:1.08;letter-spacing:-.025em}
+h1{font-size:clamp(2.6rem,6vw,4.9rem);font-weight:800}
+h2{font-size:clamp(2rem,4vw,3.1rem);font-weight:800;margin-bottom:.5em}
+h3{font-size:1.35rem;font-weight:700;margin-bottom:.35em}
+p{max-width:62ch}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:.6rem 1rem;border-radius:8px;z-index:100}
+.skip:focus{left:8px}
+#progress{position:fixed;top:0;left:0;height:4px;width:0;background:var(--coral);z-index:80}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .2s}
+.nav.scrolled{border-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-family:var(--display);font-weight:800;font-size:1.55rem;color:var(--ink);letter-spacing:-.04em}
+.logo span{color:var(--coral)}
+.logo:hover{text-decoration:none}
+.nav ul{display:flex;gap:1.9rem;list-style:none;align-items:center}
+.nav ul a{color:var(--ink);font-weight:500;font-size:.98rem}
+.btn{display:inline-block;background:var(--coral);color:#fff!important;font-weight:700;padding:.9rem 1.7rem;border-radius:999px;border:0;cursor:pointer;font:inherit;font-weight:700;transition:transform .15s,background .15s}
+.btn:hover{background:var(--coral-dark);transform:translateY(-2px);text-decoration:none}
+.btn.dark{background:var(--ink)}.btn.dark:hover{background:#000}
+.btn.sun{background:#fff;color:var(--ink)!important}.btn.sun:hover{background:var(--peach)}
+.btn.ghost{background:transparent;color:var(--ink)!important;border:2px solid var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff!important}
+.menu-btn{display:none;background:none;border:0;font-size:1.7rem;cursor:pointer;color:var(--ink)}
+
+/* hero */
+.hero{position:relative;padding:5rem 0 5.5rem;overflow:hidden;background:linear-gradient(180deg,var(--peach),#fff 85%)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+.hero p.lead{font-size:1.25rem;color:var(--muted);margin:1.4rem 0 2rem}
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap}
+.hero-note{margin-top:1.4rem;font-size:.95rem;color:var(--muted)}
+.chat{background:#fff;border-radius:28px;padding:1.4rem;box-shadow:0 30px 70px rgba(23,23,28,.14);display:grid;gap:.9rem;position:relative}
+.chat-head{display:flex;gap:.8rem;align-items:center;padding-bottom:.9rem;border-bottom:1px solid var(--line)}
+.avatar{width:44px;height:44px;border-radius:50%;background:var(--coral);color:#fff;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:1.3rem}
+.chat-head b{display:block;line-height:1.2}.chat-head small{color:var(--muted)}
+.bubble{padding:.8rem 1.1rem;border-radius:18px;max-width:88%;font-size:.98rem;line-height:1.45}
+.bubble.me{background:var(--sand);justify-self:end;border-bottom-right-radius:4px}
+.bubble.tutor{background:var(--peach);border-bottom-left-radius:4px}
+.bubble.tutor b{font-family:var(--display);font-size:1.15rem;color:var(--coral-dark)}
+.chat .bubble{opacity:0;transform:translateY(10px);animation:pop .5s forwards}
+.chat .bubble:nth-of-type(1){animation-delay:.4s}.chat .bubble:nth-of-type(2){animation-delay:1.4s}.chat .bubble:nth-of-type(3){animation-delay:2.4s}
+@keyframes pop{to{opacity:1;transform:none}}
+.badge{position:absolute;right:-12px;top:-14px;background:var(--ink);color:#fff;border-radius:999px;padding:.4rem 1rem;font-size:.85rem;font-weight:700;transform:rotate(4deg)}
+
+/* sections */
+section{padding:6rem 0}
+.sec-head{margin-bottom:3rem}
+.sec-head.center{text-align:center}.sec-head.center p{margin-inline:auto}
+.sec-head p{color:var(--muted);font-size:1.15rem}
+.alt{background:var(--sand)}
+
+/* sliding panels */
+.slider{overflow:hidden;padding:.6rem 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.track{display:flex;gap:1.1rem;width:max-content;animation:left 45s linear infinite}
+.slider.rev .track{animation-name:right;animation-duration:55s}
+.slider:hover .track{animation-play-state:paused}
+@keyframes left{to{transform:translateX(-50%)}}
+@keyframes right{from{transform:translateX(-50%)}to{transform:none}}
+.word{width:230px;flex:none;border-radius:22px;padding:1.4rem;background:var(--coral);color:#fff}
+.word:nth-child(4n+2){background:var(--ink)}
+.word:nth-child(4n+3){background:var(--peach);color:var(--ink)}
+.word:nth-child(4n+4){background:#fff;color:var(--ink);border:1.5px solid var(--line)}
+.word b{display:block;font-family:var(--display);font-size:2rem;line-height:1.1;margin-bottom:.5rem}
+.word i{display:block;font-style:normal;opacity:.85;font-size:.95rem}
+.word span{display:inline-block;margin-top:.8rem;font-size:.82rem;font-weight:700;background:rgba(255,255,255,.2);padding:.15rem .7rem;border-radius:999px}
+.word:nth-child(4n+3) span,.word:nth-child(4n+4) span{background:var(--sand)}
+.way{width:320px;flex:none;border-radius:22px;padding:1.6rem;background:#fff;border:1.5px solid var(--line)}
+.way .ico{display:grid;place-items:center;width:48px;height:48px;border-radius:14px;background:var(--peach);font-family:var(--display);font-weight:800;color:var(--coral-dark);font-size:1.4rem;margin-bottom:1rem}
+.way p{color:var(--muted);font-size:.98rem}
+.slider-label{margin:2.4rem 0 .6rem;font-family:var(--display);font-weight:700;font-size:1.15rem}
+
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:1.1rem}
+.tile{border-radius:var(--radius);padding:2rem;min-height:250px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
+.tile p{opacity:.9;font-size:1rem}
+.t1{grid-column:span 4;background:var(--coral);color:#fff}
+.t2{grid-column:span 2;background:var(--ink);color:#fff}
+.t3{grid-column:span 2;background:var(--peach)}
+.t4{grid-column:span 4;background:#fff;border:1.5px solid var(--line)}
+.tile .big{position:absolute;right:1.4rem;top:.4rem;font-family:var(--display);font-weight:800;font-size:7.5rem;line-height:1;opacity:.18}
+.t4 .big{color:var(--coral);opacity:.25}
+
+/* steps */
+.step-row{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;padding:3.2rem 0}
+.step-row+.step-row{border-top:1px solid var(--line)}
+.step-row:nth-child(even) .step-text{order:2}
+.num{display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:var(--coral);color:#fff;font-family:var(--display);font-weight:800;font-size:1.6rem;margin-bottom:1.2rem}
+.step-text p{color:var(--muted);margin-bottom:1.5rem}
+.mock{background:var(--sand);border-radius:var(--radius);padding:1.8rem;display:grid;gap:.9rem}
+.mock .card{background:#fff;border-radius:16px;padding:1rem 1.2rem;box-shadow:0 8px 24px rgba(23,23,28,.07);display:flex;justify-content:space-between;align-items:center;gap:1rem;font-weight:500}
+.pbar{height:10px;border-radius:10px;background:var(--line);overflow:hidden}
+.pbar i{display:block;height:100%;width:50%;background:var(--coral);border-radius:10px}
+.pill{background:var(--peach);color:var(--coral-dark);font-weight:700;font-size:.85rem;padding:.25rem .8rem;border-radius:999px;white-space:nowrap}
+.slot{border:2px solid var(--line);background:#fff;border-radius:14px;padding:.9rem 1.2rem;display:flex;justify-content:space-between;font-weight:700}
+.slot.on{border-color:var(--coral);background:var(--peach)}
+
+/* free courses banner */
+.banner{background:var(--coral);color:#fff;border-radius:36px;padding:4rem;display:grid;grid-template-columns:1.3fr .7fr;gap:2rem;align-items:center;position:relative;overflow:hidden}
+.banner p{color:#fff;opacity:.92;margin-bottom:1.6rem}
+.banner .g{font-family:var(--display);font-weight:800;font-size:9rem;line-height:1;opacity:.25;text-align:center}
+.banner h2{color:#fff}
+
+/* faq */
+.faq details{border-bottom:1px solid var(--line);padding:1.3rem 0}
+.faq summary{cursor:pointer;font-family:var(--display);font-weight:700;font-size:1.25rem;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.8rem;line-height:1;color:var(--coral);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{margin-top:.8rem;color:var(--muted)}
+
+/* contact */
+.contact{background:var(--ink);color:#fff}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start}
+.contact p{color:#CFCFD6}
+.checks{list-style:none;margin:1.4rem 0 2rem}
+.checks li{padding-left:2rem;position:relative;margin-bottom:.7rem}
+.checks li::before{content:"";position:absolute;left:0;top:.45em;width:1.1rem;height:1.1rem;border-radius:50%;background:var(--coral)}
+.checks li::after{content:"";position:absolute;left:.37rem;top:.62em;width:.35rem;height:.6rem;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+form{background:#fff;color:var(--ink);padding:2rem;border-radius:28px;display:grid;gap:1.1rem}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+label{display:grid;gap:.35rem;font-weight:700;font-size:.92rem}
+input,select,textarea{font:inherit;font-weight:400;padding:.8rem 1rem;border:1.5px solid var(--line);border-radius:12px;background:var(--sand);color:var(--ink);width:100%}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--coral);background:#fff}
+textarea{min-height:100px;resize:vertical}
+.hp{position:absolute;left:-9999px}
+#form-status{font-weight:700;min-height:1.4em}
+#form-status.ok{color:#1E8A55}#form-status.err{color:#C0392B}
+.fine{font-size:.82rem;color:var(--muted)!important}
+
+footer{background:#0E0E12;color:#A9A9B3;padding:3rem 0;font-size:.95rem}
+footer .wrap{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+footer a{color:#E4E4EA}
+footer ul{list-style:none;display:flex;gap:1.4rem;flex-wrap:wrap}
+
+/* courses page */
+.page-hero{background:linear-gradient(180deg,var(--peach),#fff);padding:4.5rem 0 3rem}
+.page-hero p{color:var(--muted);font-size:1.2rem;margin-top:1rem}
+.toc{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:2rem}
+.toc a{background:#fff;border:1.5px solid var(--line);color:var(--ink);padding:.5rem 1rem;border-radius:999px;font-weight:500;font-size:.95rem}
+.toc a:hover{background:var(--coral);border-color:var(--coral);color:#fff;text-decoration:none}
+.lesson{padding:4rem 0;border-bottom:1px solid var(--line)}
+.lesson:nth-of-type(even){background:var(--sand)}
+.lesson .meta{display:flex;gap:.6rem;margin-bottom:1rem;flex-wrap:wrap}
+.lesson .intro{color:var(--muted);margin-bottom:2rem}
+.tag{display:inline-block;font-size:.82rem;font-weight:700;background:var(--peach);color:var(--coral-dark);padding:.2rem .7rem;border-radius:999px}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+th,td{text-align:left;padding:.85rem 1.1rem;border-bottom:1px solid var(--line)}
+th{background:var(--peach);font-family:var(--display);font-size:.95rem}
+td.gr{font-family:var(--display);font-weight:700;font-size:1.25rem;color:var(--coral-dark)}
+tr:last-child td{border-bottom:0}
+.table-scroll{overflow-x:auto}
+.tip{margin-top:1.5rem;background:var(--peach);border-left:5px solid var(--coral);padding:1rem 1.3rem;border-radius:0 14px 14px 0;max-width:70ch}
+.cta-band{background:var(--coral);color:#fff;text-align:center;padding:4.5rem 0}
+.cta-band h2{color:#fff}
+.cta-band p{margin:0 auto 1.8rem;color:#fff;opacity:.92}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:900px){
+  .hero .wrap,.split,.step-row,.banner{grid-template-columns:1fr}
+  .step-row:nth-child(even) .step-text{order:0}
+  .step-row{gap:2rem}
+  .bento{grid-template-columns:1fr}
+  .t1,.t2,.t3,.t4{grid-column:auto;min-height:200px}
+  .row{grid-template-columns:1fr}
+  .banner{padding:2.5rem}.banner .g{display:none}
+  .menu-btn{display:block}
+  .nav ul{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;flex-direction:column;padding:1.5rem;gap:1.2rem;border-bottom:1px solid var(--line)}
+  .nav ul.open{display:flex}
+  section{padding:4rem 0}
+  .badge{right:8px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal,.chat .bubble{opacity:1;transform:none}
+  .slider{overflow-x:auto;-webkit-mask-image:none;mask-image:none}
+  html{scroll-behavior:auto}
+}
+
+/* articles & simple pages */
+.article{padding:4rem 0 5rem}
+.article .wrap{width:min(780px,92%)}
+.article h1{font-size:clamp(2.2rem,5vw,3.4rem);margin:.6rem 0 1rem}
+.article h2{font-size:1.7rem;margin:2.4rem 0 .6rem}
+.article p,.article li{max-width:none;margin-bottom:1rem;font-size:1.1rem}
+.article ul,.article ol{padding-left:1.4rem;margin-bottom:1rem}
+.article .byline{color:var(--muted);font-size:.95rem}
+.crumbs{font-size:.92rem;color:var(--muted)}
+.post-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.post-card{display:flex;flex-direction:column;background:#fff;border:1.5px solid var(--line);border-radius:var(--radius);padding:1.8rem;color:var(--ink);transition:transform .2s,box-shadow .2s}
+.post-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(23,23,28,.1);text-decoration:none}
+.post-card .glyph{font-family:var(--display);font-weight:800;font-size:2.4rem;color:var(--coral);line-height:1;margin-bottom:.8rem}
+.post-card p{color:var(--muted);font-size:.98rem;flex:1}
+.post-card .more{margin-top:1rem;font-weight:700;color:var(--coral-dark)}
+.center-page{min-height:60vh;display:grid;place-items:center;text-align:center;padding:5rem 0}
+.center-page .g{font-family:var(--display);font-weight:800;font-size:8rem;color:var(--coral);line-height:1}
+@media(max-width:900px){.post-cards{grid-template-columns:1fr}}
+
+/* ===== course app ===== */
+.c-hero{background:linear-gradient(180deg,var(--peach),#fff);padding:3rem 0 1rem}
+.c-hero h1{font-size:clamp(2rem,5vw,3.4rem)}
+.c-hero p{color:var(--muted);font-size:1.15rem;margin-top:.6rem}
+.meta-chips{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.2rem}
+.chip{display:inline-block;font-size:.85rem;font-weight:700;background:#fff;border:1.5px solid var(--line);padding:.25rem .8rem;border-radius:999px}
+.chip.on{background:#E8F7EE;border-color:#BFE6CE;color:#1E7A48}
+.chip.off{background:#FFF4E5;border-color:#FFD9A0;color:#8A5200}
+.course{display:grid;grid-template-columns:310px minmax(0,1fr);gap:2rem;align-items:start;padding:1.5rem 0 4rem}
+.c-side{position:sticky;top:90px;background:#fff;border:1.5px solid var(--line);border-radius:20px;padding:1.1rem;max-height:calc(100vh - 110px);overflow:auto}
+.c-side h2{font-size:1.1rem;margin:0 0 .7rem}
+#side-list{list-style:none;display:grid;gap:.35rem}
+.unit-btn{width:100%;display:flex;gap:.7rem;align-items:center;text-align:left;background:transparent;border:1.5px solid transparent;border-radius:14px;padding:.6rem .7rem;cursor:pointer;font:inherit;color:var(--ink)}
+.unit-btn:hover{background:var(--sand)}
+.unit-btn.cur{background:var(--peach);border-color:#F7C9BC}
+.u-num{flex:none;width:32px;height:32px;border-radius:50%;background:var(--sand);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:.95rem}
+.unit-btn.all .u-num{background:var(--coral);color:#fff}
+.unit-btn.cur .u-num{background:var(--ink);color:#fff}
+.u-body{display:grid;line-height:1.25}.u-body b{font-size:.98rem}.u-body small{color:var(--muted);font-size:.8rem}
+.reset{margin-top:1rem;background:none;border:0;color:var(--muted);font:inherit;font-size:.85rem;cursor:pointer;text-decoration:underline}
+.c-main{min-width:0}
+.c-top{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:1rem}
+.c-top .grow{flex:1;min-width:200px}
+#crumb{font-weight:700;font-size:.95rem;color:var(--muted)}
+.pbar{height:10px;border-radius:10px;background:var(--line);overflow:hidden;margin-top:.4rem}
+.pbar i{display:block;height:100%;width:0;background:var(--coral);border-radius:10px;transition:width .4s}
+#pct{font-size:.85rem;color:var(--muted);font-weight:700;white-space:nowrap}
+#units-toggle{display:none}
+.btn.small{padding:.6rem 1.2rem;font-size:.95rem}
+.btn[disabled]{opacity:.45;cursor:not-allowed;transform:none}
+.btn[hidden]{display:none}
+.c-card{background:#fff;border:1.5px solid var(--line);border-radius:28px;padding:2rem;min-height:440px;box-shadow:0 14px 40px rgba(23,23,28,.06)}
+.c-card h2{font-size:1.9rem;margin-bottom:1rem}
+.intro{color:var(--muted);margin-bottom:1.2rem}
+.prose .lead{font-size:1.2rem;margin-bottom:1rem}
+.prose h3{margin:1.4rem 0 .5rem}
+.prose p{margin-bottom:.8rem;max-width:none}
+.ticks{list-style:none;margin:.4rem 0 1rem}
+.ticks li{position:relative;padding-left:1.9rem;margin-bottom:.55rem}
+.ticks li::before{content:"";position:absolute;left:0;top:.4em;width:1.05rem;height:1.05rem;border-radius:50%;background:var(--coral)}
+.ticks li::after{content:"";position:absolute;left:.36rem;top:.55em;width:.3rem;height:.55rem;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.steps-list{padding-left:1.4rem;margin:.6rem 0 1rem}.steps-list li{margin-bottom:.5rem}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1rem 0}
+.mini{background:var(--sand);border-radius:18px;padding:1.1rem 1.2rem}
+.mini p{margin:.3rem 0 0;color:var(--muted);font-size:.97rem}
+.say-ex{background:var(--peach);color:var(--coral-dark);font-weight:700;padding:0 .4rem;border-radius:6px}
+.gl{font-family:var(--display);font-size:1.3rem;color:var(--coral-dark)}
+.big-letters{font-family:var(--display);font-weight:800;font-size:1.8rem;letter-spacing:.3em;color:var(--coral-dark)}
+.chips-row{display:flex;gap:.7rem;flex-wrap:wrap;margin:1rem 0}
+.big-chip{font-family:var(--display);font-weight:800;font-size:2.2rem;background:var(--peach);color:var(--coral-dark);border-radius:18px;padding:.3rem 1.2rem}
+.note{background:var(--peach);border-left:5px solid var(--coral);padding:.9rem 1.2rem;border-radius:0 14px 14px 0;max-width:none!important}
+.prose table{margin:.5rem 0 1rem}
+
+/* flashcards */
+.fc-count{font-weight:700;color:var(--muted);font-size:.9rem;text-align:center;margin-bottom:.8rem}
+.fc{display:block;position:relative;width:min(440px,100%);height:280px;margin:0 auto;border:0;background:none;cursor:pointer;perspective:1100px;padding:0;font:inherit;color:inherit}
+.fc-face{position:absolute;inset:0;border-radius:26px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;padding:1.4rem;text-align:center;backface-visibility:hidden;-webkit-backface-visibility:hidden;transition:transform .55s}
+.fc-front{background:var(--coral);color:#fff;box-shadow:0 18px 40px rgba(235,99,69,.35)}
+.fc-back{background:var(--ink);color:#fff;transform:rotateY(180deg)}
+.fc.flipped .fc-front{transform:rotateY(180deg)}
+.fc.flipped .fc-back{transform:rotateY(360deg)}
+.fc-big{font-family:var(--display);font-weight:800;font-size:5rem;line-height:1.05}
+.fc-big.long{font-size:2.6rem}
+.fc-hint{opacity:.8;font-size:.9rem}
+.fc-title{font-family:var(--display);font-weight:800;font-size:2rem;line-height:1.15}
+.fc-sub{font-size:1.1rem;color:#FFC9BB;font-weight:500}
+.fc-note{font-size:.98rem;opacity:.85;max-width:34ch}
+.fc-audio{display:flex;gap:.6rem;justify-content:center;margin:1rem 0 .4rem;min-height:44px;flex-wrap:wrap}
+.fc-nav{display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:.6rem;flex-wrap:wrap}
+.fc-dots{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;max-width:260px}
+.fc-dots span{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.fc-dots span.seen{background:var(--coral)}
+.fc-dots span.cur{outline:2px solid var(--ink);outline-offset:2px}
+.say{display:inline-flex;align-items:center;gap:.4rem;background:var(--peach);color:var(--coral-dark);border:0;border-radius:999px;padding:.5rem 1rem;font:inherit;font-weight:700;font-size:.92rem;cursor:pointer}
+.say:hover{background:#FFE0D6}
+.say.small{padding:.35rem .6rem}.say.small .say-t{display:none}
+.say.big{padding:.9rem 1.6rem;font-size:1.05rem}
+
+/* match */
+.mgrid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.mcol{display:grid;gap:.7rem;align-content:start}
+.mt{font:inherit;font-weight:700;padding:1rem;border-radius:16px;border:2px solid var(--line);background:#fff;cursor:pointer;color:var(--ink);transition:transform .12s,border-color .12s,background .12s;min-height:60px}
+.mt-l{font-family:var(--display);font-size:1.5rem}
+.mt:hover{border-color:var(--coral)}
+.mt.sel{border-color:var(--coral);background:var(--peach)}
+.mt.ok{border-color:#2DA062;background:#E8F7EE;color:#1E7A48}
+.mt.bad{border-color:#D94646;background:#FDECEC;animation:shake .4s}
+@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.status{margin-top:1rem;font-weight:700;color:var(--muted);text-align:center}
+.status.good{color:#1E7A48}
+
+/* quiz / type / order */
+.q-prog{font-weight:700;color:var(--muted);font-size:.9rem}
+.bar{height:8px;border-radius:8px;background:var(--line);overflow:hidden;margin:.5rem 0 1.4rem}
+.bar i{display:block;height:100%;width:0;background:var(--coral);transition:width .3s}
+.q-text{font-family:var(--display);font-weight:700;font-size:1.5rem;line-height:1.25;margin-bottom:1rem}
+.q-big{font-family:var(--display);font-weight:800;font-size:3rem;color:var(--coral-dark);margin-bottom:1rem}
+.q-big.word{font-size:3.4rem}
+.q-audio{margin-bottom:1rem}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-bottom:1rem}
+.opt{font:inherit;font-weight:500;font-size:1.1rem;text-align:left;padding:1rem 1.2rem;border-radius:16px;border:2px solid var(--line);background:#fff;cursor:pointer;color:var(--ink);transition:border-color .12s,background .12s}
+.opt:hover:not(:disabled){border-color:var(--coral);background:var(--peach)}
+.opt.right{border-color:#2DA062;background:#E8F7EE;color:#1E7A48}
+.opt.wrong{border-color:#D94646;background:#FDECEC;color:#B02A2A}
+.opt:disabled{cursor:default}
+.feedback{min-height:1.5em;margin:.4rem 0 1rem;font-size:1.02rem}
+.feedback.good{color:#1E7A48}.feedback.bad{color:#B02A2A}
+.result{text-align:center;padding:1.5rem 0}
+.result-score{font-family:var(--display);font-weight:800;font-size:4.5rem;color:var(--coral)}
+.result-msg{margin:0 auto 1.2rem;font-size:1.15rem}
+.type-in{font:inherit;font-size:1.15rem;padding:.9rem 1.1rem;border:2px solid var(--line);border-radius:14px;width:100%;background:var(--sand);color:var(--ink);margin-bottom:.8rem}
+.type-in:focus{outline:none;border-color:var(--coral);background:#fff}
+.row-btns{display:flex;gap:.7rem;flex-wrap:wrap;margin:.4rem 0 1rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.o-line{min-height:64px;border:2px dashed var(--line);border-radius:16px;padding:.6rem;display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin-bottom:1rem;background:var(--sand)}
+.o-ph{color:var(--muted);padding:0 .5rem}
+.o-bank{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1rem}
+.tok{font:inherit;font-family:var(--display);font-weight:700;font-size:1.25rem;padding:.55rem 1rem;border-radius:12px;border:2px solid var(--line);background:#fff;cursor:pointer;color:var(--ink)}
+.tok:hover:not(:disabled){border-color:var(--coral)}
+.tok.in{background:var(--peach);border-color:#F7C9BC}
+
+/* dialogue */
+.dlg{display:grid;gap:.9rem;margin-top:1rem}
+.dlg-line{max-width:92%;background:var(--sand);border-radius:20px 20px 20px 6px;padding:.9rem 1.1rem;display:grid;grid-template-columns:1fr auto;gap:.3rem .6rem;align-items:center}
+.dlg-line.b{justify-self:end;background:var(--peach);border-radius:20px 20px 6px 20px}
+.dlg-g{font-family:var(--display);font-weight:700;font-size:1.3rem;cursor:pointer}
+.dlg-tr{grid-column:1/-1;border-top:1px dashed #D8D1CB;padding-top:.4rem}
+.dlg-tr[hidden]{display:none}
+.dlg-r{color:var(--coral-dark);font-weight:500}.dlg-e{color:var(--muted)}
+
+/* summary */
+.celebrate{text-align:center;background:linear-gradient(135deg,var(--coral),#F08A70);color:#fff;border-radius:24px;padding:2rem;margin-bottom:1.4rem}
+.cel-g{font-family:var(--display);font-weight:800;font-size:3.2rem;line-height:1}
+.celebrate.big .cel-g{font-size:3.8rem}
+.cel-t{margin:.5rem auto 0;font-size:1.15rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:.8rem;margin-bottom:1.4rem}
+.stat{background:var(--sand);border-radius:18px;padding:1rem;text-align:center;color:var(--muted);font-size:.9rem}
+.stat b{display:block;font-family:var(--display);font-size:1.8rem;color:var(--ink)}
+
+/* nav under card */
+.c-nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:1.2rem;flex-wrap:wrap}
+#step-dots{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;flex:1}
+.sd{width:12px;height:12px;border-radius:50%;border:0;background:var(--line);cursor:pointer;padding:0}
+.sd.done{background:var(--coral)}.sd.cur{outline:2px solid var(--ink);outline-offset:2px}
+#toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,30px);background:var(--ink);color:#fff;padding:.8rem 1.2rem;border-radius:14px;opacity:0;pointer-events:none;transition:.3s;max-width:90%;z-index:90;text-align:center}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+.outline{padding:4rem 0}
+.outline ol{padding-left:1.4rem}.outline li{margin-bottom:.8rem}
+noscript .wrap{padding:2rem 0}
+
+@media(max-width:900px){
+  .course{grid-template-columns:1fr}
+  .c-side{display:none;position:static;max-height:none}
+  .c-side.open{display:block}
+  #units-toggle{display:inline-block}
+  .c-card{padding:1.3rem}
+  .opts,.mgrid,.form-row{grid-template-columns:1fr}
+  .mgrid{grid-template-columns:1fr 1fr}
+  .fc{height:250px}.fc-big{font-size:4rem}
+  .dlg-line{max-width:100%}
+}
+@media(prefers-reduced-motion:reduce){.fc-face{transition:none}}
+
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Introduction to Greek","description":"A free interactive beginner course for English speakers: the Greek alphabet with audio, letter pairs, reading practice, greetings, introductions and numbers 0 to 10.","inLanguage":"en","isAccessibleForFree":true,"educationalLevel":"Beginner","timeRequired":"PT45M","provider":{"@type":"Organization","name":"Alphabeta","sameAs":"https://YOUR-USERNAME.github.io/alphabeta/"},"hasCourseInstance":{"@type":"CourseInstance","courseMode":"online","courseWorkload":"PT45M"}}</script>
+</head>
+<body>
+<div id="progress" aria-hidden="true"></div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav"><div class="wrap">
+<a class="logo" href="index.html" aria-label="Alphabeta home">Alpha<span>beta</span></a>
+<button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">☰</button>
+<nav aria-label="Main"><ul>
+<li><a href="courses.html">Free courses</a></li>
+<li><a href="blog/">Blog</a></li>
+<li><a href="index.html#how">How it works</a></li>
+<li><a href="index.html#faq">FAQ</a></li>
+<li><a class="btn" href="index.html#contact">Find a tutor</a></li>
+</ul></nav></div></header>
+<main id="main">
+<section class="c-hero"><div class="wrap">
+<p class="crumbs" style="font-size:.92rem"><a href="index.html">Home</a> / <a href="courses.html">Free courses</a> / Introduction to Greek</p>
+<h1>Introduction to Greek</h1>
+<p>Learn the alphabet, read real words, greet people and introduce yourself. Interactive, with audio, and free.</p>
+<div class="meta-chips"><span class="chip">9 units</span><span class="chip">About 45 minutes</span><span class="chip">Beginner</span><span class="chip">Free</span><span id="audio-chip" class="chip off">Checking audio…</span></div>
+</div></section>
+
+<noscript><div class="wrap"><p class="note">This course is interactive and needs JavaScript. Please enable it in your browser to take the course.</p></div></noscript>
+
+<div class="wrap course" id="course">
+  <aside class="c-side" id="side" aria-label="Course units">
+    <h2>Units</h2>
+    <ul id="side-list"></ul>
+    <button type="button" class="reset" id="reset">Reset my progress</button>
+  </aside>
+  <div class="c-main">
+    <div class="c-top">
+      <button type="button" class="btn ghost small" id="units-toggle">Units</button>
+      <div class="grow"><div id="crumb"></div><div class="pbar"><i id="topbar-fill"></i></div></div>
+      <span id="pct">0% complete</span>
+    </div>
+    <section class="c-card" id="stage-wrap" aria-live="off" style="padding:2rem">
+      <h2 id="step-title"></h2>
+      <div id="stage"></div>
+    </section>
+    <div class="c-nav">
+      <button type="button" class="btn ghost small" id="back">← Back</button>
+      <div id="step-dots" aria-label="Steps in this unit"></div>
+      <button type="button" class="btn small" id="next">Continue →</button>
+    </div>
+  </div>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<section class="outline alt"><div class="wrap">
+<h2>What you will learn in Introduction to Greek</h2>
+<ol>
+<li><b>Welcome to Greek.</b> Where Greek is spoken and nine English words that are really Greek.</li>
+<li><b>The alphabet, part 1.</b> Letters Α to Μ with names, sounds and audio.</li>
+<li><b>The alphabet, part 2.</b> Letters Ν to Ω, including look-alikes and final sigma.</li>
+<li><b>Letter pairs and stress.</b> ου, αι, ει, οι, μπ, ντ, γκ, τσ, stress marks and the Greek question mark.</li>
+<li><b>Reading practice.</b> Greek words that look hard but sound like English, Greek place names and street signs.</li>
+<li><b>Greetings and politeness.</b> Hello, thank you, sorry, and formal versus friendly Greek.</li>
+<li><b>Introduce yourself.</b> My name is, I am from, the verb to be, and building your own introduction.</li>
+<li><b>Numbers 0 to 10.</b> Counting, prices in euros and numbers that change gender.</li>
+<li><b>Final challenge.</b> Twelve questions with a 70 percent pass mark.</li>
+</ol>
+<p style="margin-top:1.4rem"><a class="btn" href="index.html#contact">Want a tutor to practise with? Find one</a></p>
+</div></section>
+</main>
+<footer><div class="wrap">
+<div><a class="logo" style="color:#fff" href="index.html">Alpha<span>beta</span></a><p style="margin-top:.5rem">Learn Greek with free lessons and real tutors.</p></div>
+<ul><li><a href="courses.html">Free courses</a></li><li><a href="blog/">Blog</a></li><li><a href="index.html#contact">Find a tutor</a></li><li><a href="privacy.html">Privacy</a></li></ul>
+<p>© <span id="y">2026</span> Alphabeta</p></div></footer>
+<script>
+// Mobile menu
+const menuBtn=document.querySelector('.menu-btn'),menu=document.querySelector('.nav ul');
+if(menuBtn){menuBtn.addEventListener('click',()=>{const o=menu.classList.toggle('open');menuBtn.setAttribute('aria-expanded',o)});
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')))}
+
+// Nav border + scroll progress bar
+const nav=document.querySelector('.nav'),bar=document.getElementById('progress');
+function onScroll(){nav.classList.toggle('scrolled',scrollY>10);
+  if(bar){const h=document.documentElement.scrollHeight-innerHeight;bar.style.width=(h>0?scrollY/h*100:0)+'%'}}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+// Scroll reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// Sliding panels: duplicate content once for a seamless loop
+document.querySelectorAll('.track').forEach(t=>{
+  const clones=[...t.children].map(c=>{const n=c.cloneNode(true);n.setAttribute('aria-hidden','true');return n});
+  clones.forEach(c=>t.appendChild(c))});
+
+// Timezone auto-detect
+const tz=document.getElementById('timezone');
+function setTz(){try{tz.value=Intl.DateTimeFormat().resolvedOptions().timeZone}catch(_){}}
+if(tz)setTz();
+const y=document.getElementById('y');if(y)y.textContent=new Date().getFullYear();
+
+// Web3Forms submit
+const form=document.getElementById('lesson-form');
+if(form){form.addEventListener('submit',async ev=>{
+  ev.preventDefault();
+  const status=document.getElementById('form-status'),btn=form.querySelector('button[type=submit]');
+  status.className='';status.textContent='Sending…';btn.disabled=true;
+  try{
+    const res=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)});
+    const data=await res.json();
+    if(data.success){status.className='ok';status.textContent='Thank you! We will email you within 48 hours to match you with a tutor.';form.reset();setTz()}
+    else{status.className='err';status.textContent=data.message||'Something went wrong. Please try again.'}
+  }catch(_){status.className='err';status.textContent='Network error. Please check your connection and try again.'}
+  btn.disabled=false})}
+
+</script>
+<script>
+(function(){
+'use strict';
+/* ---------- helpers ---------- */
+const KEY='alphabeta-intro-greek-v1';
+const $=(s,r=document)=>r.querySelector(s);
+function h(tag,attrs,...kids){const e=document.createElement(tag);
+  for(const k in (attrs||{})){const v=attrs[k];
+    if(k==='class')e.className=v;else if(k==='html')e.innerHTML=v;
+    else if(k.slice(0,2)==='on')e.addEventListener(k.slice(2),v);
+    else if(v!==false&&v!=null)e.setAttribute(k,v===true?'':v)}
+  for(const kid of kids.flat(Infinity)){if(kid==null||kid===false)continue;e.append(kid.nodeType?kid:document.createTextNode(String(kid)))}
+  return e}
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const norm=s=>String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9\s]/g,'').replace(/\s+/g,' ').trim();
+const sample=(a,n)=>shuffle(a).slice(0,n);
+const ICON='<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M3 9v6h4l5 4V5L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg>';
+
+/* ---------- audio (Web Speech API) ---------- */
+let voice=null;
+function pickVoice(){
+  if(!('speechSynthesis' in window))return;
+  const vs=speechSynthesis.getVoices();
+  voice=vs.find(v=>/^el([-_]|$)/i.test(v.lang))||null;
+  updateAudioChip()}
+if('speechSynthesis' in window){pickVoice();try{speechSynthesis.addEventListener('voiceschanged',pickVoice)}catch(e){speechSynthesis.onvoiceschanged=pickVoice}}
+function hasAudio(){return !!voice}
+function speak(text,rate){
+  if(!voice){toast('No Greek voice found on this device, so audio is off. You can still do every activity by reading.');return}
+  try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.voice=voice;u.lang=voice.lang||'el-GR';u.rate=rate||.85;speechSynthesis.speak(u)}catch(e){}}
+function sayBtn(text,label,cls){
+  return h('button',{type:'button',class:'say '+(cls||''),'aria-label':label||'Hear it',onclick:ev=>{ev.stopPropagation();speak(text)}},
+    h('span',{html:ICON}),h('span',{class:'say-t'},label||'Hear it'))}
+let toastT;
+function toast(msg){let t=$('#toast');if(!t)return;t.textContent=msg;t.classList.add('show');clearTimeout(toastT);toastT=setTimeout(()=>t.classList.remove('show'),3800)}
+function updateAudioChip(){const c=$('#audio-chip');if(!c)return;c.className='chip '+(hasAudio()?'on':'off');c.textContent=hasAudio()?'Audio on':'Audio off: no Greek voice on this device'}
+
+/* ---------- content ---------- */
+const LET=[
+['Α α','alpha','άλφα','a as in father','Αθήνα','Athína','Athens'],
+['Β β','vita','βήτα','v as in van','βιβλίο','vivlío','book'],
+['Γ γ','gamma','γάμμα','y as in yes (before e, i) or a soft gh','γάλα','gála','milk'],
+['Δ δ','dhelta','δέλτα','th as in this','δέντρο','dhéndro','tree'],
+['Ε ε','epsilon','έψιλον','e as in pet','εδώ','edhó','here'],
+['Ζ ζ','zita','ζήτα','z as in zoo','ζάχαρη','záhari','sugar'],
+['Η η','ita','ήτα','ee as in see','ήλιος','ílios','sun'],
+['Θ θ','thita','θήτα','th as in think','θάλασσα','thálassa','sea'],
+['Ι ι','yiota','γιώτα','ee as in see','ιστορία','istoría','history'],
+['Κ κ','kappa','κάπα','k as in kite','καφές','kafés','coffee'],
+['Λ λ','lamda','λάμδα','l as in love','λεμόνι','lemóni','lemon'],
+['Μ μ','mi','μι','m as in mother','μήλο','mílo','apple'],
+['Ν ν','ni','νι','n as in no','νερό','neró','water'],
+['Ξ ξ','ksi','ξι','ks as in box','ξένος','xénos','stranger'],
+['Ο ο','omikron','όμικρον','o as in more','όνομα','ónoma','name'],
+['Π π','pi','πι','p as in pen','παιδί','pedhí','child'],
+['Ρ ρ','ro','ρο','r, lightly rolled','ρολόι','roló-i','clock'],
+['Σ σ ς','sigma','σίγμα','s as in sun','σπίτι','spíti','house'],
+['Τ τ','taf','ταυ','t as in top','τραπέζι','trapézi','table'],
+['Υ υ','ipsilon','ύψιλον','ee as in see','ύπνος','ípnos','sleep'],
+['Φ φ','fi','φι','f as in fun','φίλος','fílos','friend'],
+['Χ χ','hi','χι','h as in loch','χέρι','héri','hand'],
+['Ψ ψ','psi','ψι','ps as in lips','ψωμί','psomí','bread'],
+['Ω ω','omega','ωμέγα','o as in more','ώρα','óra','hour']
+].map(a=>({g:a[0],n:a[1],say:a[2],s:a[3],w:a[4],wr:a[5],we:a[6]}));
+const LP1=LET.slice(0,12),LP2=LET.slice(12);
+const byG=(arr,gs)=>gs.map(g=>arr.find(l=>l.g.startsWith(g)));
+const letterCards=arr=>arr.map(l=>({g:l.g,e:l.n,r:'Sounds like: '+l.s,n:'Example: '+l.w+' ('+l.wr+'), '+l.we,say:l.say,say2:l.w,lab2:'Hear example'}));
+const letterListen=(arr,n)=>()=>sample(arr,n).map(l=>({listen:true,say:l.say,q:'Listen. Which letter is this?',qfb:'Which letter is called “'+l.n+'”?',
+  opts:shuffle([l,...sample(arr.filter(x=>x!==l),3)]).map(x=>x.g),a:null,ans:l.g,why:l.g+' is called '+l.n+' ('+l.say+') and sounds like '+l.s+'.'}));
+const UNIQ={'Β':'v as in van','Δ':'th as in this','Ζ':'z as in zoo','Θ':'th as in think','Λ':'l as in love','Μ':'m as in mother','Ν':'n as in no','Ξ':'ks as in box','Ρ':'r, lightly rolled','Φ':'f as in fun','Χ':'h as in loch','Ψ':'ps as in lips','Τ':'t as in top','Κ':'k as in kite','Π':'p as in pen','Σ':'s as in sun'};
+const soundQ=letters=>()=>sample(letters,Math.min(8,letters.length)).map(l=>{const first=l.g[0];
+  return {q:'Which letter makes the sound “'+UNIQ[first]+'”?',opts:shuffle([l,...sample(LET.filter(x=>UNIQ[x.g[0]]&&x!==l),3)]).map(x=>x.g),a:null,ans:l.g,why:l.g+' ('+l.n+') sounds like '+l.s+'.'}});
+
+const NUM=[['0','μηδέν','midhén','zero'],['1','ένα','éna','one'],['2','δύο','dhío','two'],['3','τρία','tría','three'],['4','τέσσερα','téssera','four'],['5','πέντε','pénde','five'],['6','έξι','éxi','six'],['7','επτά','eftá','seven (also εφτά)'],['8','οκτώ','októ','eight (also οχτώ)'],['9','εννέα','enéa','nine (also εννιά)'],['10','δέκα','dhéka','ten']];
+
+const PHR=[
+{g:'Γεια σου',r:'Ya soo',e:'Hello / Goodbye (informal)'},
+{g:'Γεια σας',r:'Ya sas',e:'Hello / Goodbye (formal or plural)'},
+{g:'Καλημέρα',r:'Kaliméra',e:'Good morning'},
+{g:'Καλησπέρα',r:'Kalispéra',e:'Good afternoon / evening'},
+{g:'Καληνύχτα',r:'Kaliníhta',e:'Good night'},
+{g:'Ευχαριστώ',r:'Efharistó',e:'Thank you'},
+{g:'Παρακαλώ',r:'Parakaló',e:'Please / You are welcome'},
+{g:'Συγγνώμη',r:'Signómi',e:'Sorry / Excuse me'},
+{g:'Ναι / Όχι',r:'Ne / Óhi',e:'Yes / No',say:'Ναι. Όχι.'},
+{g:'Τι κάνεις;',r:'Ti kánis?',e:'How are you?'},
+{g:'Καλά, ευχαριστώ',r:'Kalá, efharistó',e:'Fine, thank you'},
+{g:'Και εσύ;',r:'Ke esí?',e:'And you?'}];
+
+const UNITS=[
+/* ============ 1 ============ */
+{id:'welcome',title:'Welcome to Greek',mins:5,learned:['Where Greek is spoken and why it is friendlier than it looks','Nine English words that are really Greek','How this course works'],steps:[
+ {type:'read',title:'Meet the Greek language',html:`
+  <p class="lead">Greek has been written for around <b>3,000 years</b>. The Greek you will learn here, <b>Modern Greek</b>, is spoken by about 13 million people and is an official language of <b>Greece</b> and <b>Cyprus</b> and of the European Union.</p>
+  <h3>Why it is friendlier than it looks</h3>
+  <ul class="ticks">
+   <li><b>You already know Greek words.</b> Thousands of English words come from Greek, like <i>democracy</i>, <i>telephone</i> and <i>energy</i>.</li>
+   <li><b>Only 24 letters.</b> You can learn them in this course.</li>
+   <li><b>Spelling matches sound.</b> Once you know the letters, you can read almost any word aloud.</li>
+   <li><b>Greeks love it when you try.</b> Even a few words open conversations.</li></ul>
+  <h3>In this course you will</h3>
+  <ul class="ticks"><li>Learn the whole Greek alphabet, with sound</li><li>Read real words and street signs</li><li>Greet people and introduce yourself</li><li>Count from 0 to 10</li><li>Pass a final challenge</li></ul>`},
+ {type:'cards',title:'English words that are secretly Greek',intro:'Tap each card to flip it. Notice how much you already know.',items:[
+  {g:'δημοκρατία',e:'democracy',r:'dhimokratía',n:'dímos = people + krátos = power',say:'δημοκρατία'},
+  {g:'τηλέφωνο',e:'telephone',r:'tiléfono',n:'tíle = far + foní = sound',say:'τηλέφωνο'},
+  {g:'φωτογραφία',e:'photograph',r:'fotografía',n:'fos = light + grafí = drawing',say:'φωτογραφία'},
+  {g:'φιλοσοφία',e:'philosophy',r:'filosofía',n:'fília = love + sofía = wisdom',say:'φιλοσοφία'},
+  {g:'ενέργεια',e:'energy',r:'enérgia',n:'Used in everyday Greek today',say:'ενέργεια'},
+  {g:'θέατρο',e:'theatre',r:'théatro',n:'Greece invented drama',say:'θέατρο'},
+  {g:'μουσική',e:'music',r:'musikí',n:'From the Muses, goddesses of the arts',say:'μουσική'},
+  {g:'οικονομία',e:'economy',r:'ikonomía',n:'ikos = house + nómos = rule',say:'οικονομία'},
+  {g:'αλφάβητο',e:'alphabet',r:'alfávito',n:'Named after the first two letters: άλφα + βήτα',say:'αλφάβητο'}]},
+ {type:'read',title:'How this course works',html:`
+  <p class="lead">This course takes about <b>40 to 50 minutes</b>. You can stop any time: your progress is saved on this device.</p>
+  <div class="grid3">
+   <div class="mini"><b>Listen</b><p>Press the <span class="say-ex">speaker</span> buttons to hear Greek. If your device has no Greek voice, every activity still works with reading.</p></div>
+   <div class="mini"><b>Say it aloud</b><p>Speaking is how it sticks. Repeat every word out loud, even when you are alone.</p></div>
+   <div class="mini"><b>Mistakes are fine</b><p>Every quiz explains the answer, and you can retry any activity.</p></div>
+  </div>
+  <p>Each unit ends with a short summary. At the very end there is a final challenge with a pass mark of 70%.</p>`},
+ {type:'quiz',title:'Warm-up quiz',questions:[
+  {q:'Greek is an official language in which country pair?',opts:['Greece and Cyprus','Greece and Turkey','Cyprus and Malta','Italy and Spain'],a:0,why:'Greek is official in Greece and Cyprus, and is also an official EU language.'},
+  {q:'The word “alphabet” comes from which two Greek letters?',opts:['alpha and beta','delta and gamma','omega and sigma','pi and rho'],a:0,why:'Άλφα + βήτα = alphabet. It is literally “A B”.'},
+  {q:'What does δημοκρατία mean in English?',opts:['democracy','diplomacy','dynamite','dictionary'],a:0,why:'Dímos (people) + krátos (power) = democracy, “power of the people”.'},
+  {q:'Which statement is true about Greek spelling?',opts:['Spelling matches sound very consistently','Most letters are silent','Spelling is the same as in English','Greek has no vowels'],a:0,why:'Once you know the alphabet you can read nearly any Greek word aloud.'}]}
+]},
+/* ============ 2 ============ */
+{id:'alphabet-1',title:'The alphabet, part 1',mins:7,learned:['The first 12 letters: Α to Μ, their names and sounds','Why Β sounds like v and Η sounds like ee','How to recognise letters when you hear them'],steps:[
+ {type:'read',title:'24 letters in two steps',html:`
+  <p class="lead">The Greek alphabet has <b>24 letters</b>. We will learn 12 now and 12 in the next unit.</p>
+  <p>Most letters have a <b>capital</b> and a <b>small</b> form, written like <b>Α α</b>. Each card shows both.</p>
+  <h3>Letters you already know</h3>
+  <p>These look and sound close to English: <span class="big-letters">Α Ε Ζ Κ Λ Μ</span></p>
+  <h3>Watch out for look-alikes</h3>
+  <p>Some letters look English but sound different. That is where beginners slip. In this unit:</p>
+  <ul class="ticks"><li><b class="gl">Β</b> sounds like <b>v</b>, not b</li><li><b class="gl">Η</b> sounds like <b>ee</b>, not h</li></ul>
+  <p>Flip every card on the next screen. Listen, repeat, and look at the example word.</p>`},
+ {type:'cards',title:'Flashcards: letters 1 to 12',intro:'Flip all 12 cards. Press Hear to listen, then say it out loud.',items:letterCards(LP1)},
+ {type:'match',title:'Match the letter to its name',intro:'Tap a letter, then tap its name.',pairs:byG(LET,['Α','Γ','Ε','Η','Ι','Κ']).map(l=>({l:l.g,r:l.n,say:l.say}))},
+ {type:'match',title:'Match the letter to its sound',intro:'Tap a letter, then tap the sound it makes.',pairs:byG(LET,['Β','Δ','Ζ','Θ','Λ','Μ']).map(l=>({l:l.g,r:l.s,say:l.say}))},
+ {type:'quiz',title:'Listening: which letter?',gen:letterListen(LP1,6)},
+ {type:'quiz',title:'Look-alike traps',questions:[
+  {q:'Which sound does Β make?',opts:['v as in van','b as in boy','p as in pen','d as in dog'],a:0,why:'Β is “vita”, our v. This is why the Greek word for book, βιβλίο, is pronounced vivlío.'},
+  {q:'How do you say Η?',opts:['ee as in see','h as in hat','eh as in pet','n as in no'],a:0,why:'Η is “ita” and sounds like ee. It only looks like our H.'},
+  {q:'Which letter is the “th” in think?',opts:['Θ','Δ','Γ','Β'],a:0,why:'Θ (thita) is the breathy th of think. Δ (dhelta) is the th of this.'},
+  {q:'Which letter is the “th” in this?',opts:['Δ','Θ','Ζ','Λ'],a:0,why:'Δ (dhelta) is the soft, voiced th, as in this, that and the.'},
+  {q:'Γ before e or i sounds most like…',opts:['y as in yes','g as in go','j as in jam','k as in kite'],a:0,why:'Γ is a soft sound. Before e or i it is like y, as in γεια (ya).'}]}
+]},
+/* ============ 3 ============ */
+{id:'alphabet-2',title:'The alphabet, part 2',mins:8,learned:['The last 12 letters: Ν to Ω','The look-alikes Ν, Ρ, Υ and Χ','Final sigma ς and the double sounds ξ and ψ'],steps:[
+ {type:'read',title:'The second half',html:`
+  <p class="lead">You know half the alphabet. Now the last 12.</p>
+  <h3>More look-alikes</h3>
+  <ul class="ticks"><li><b class="gl">Ν</b> looks like v but is <b>n</b></li><li><b class="gl">Ρ</b> looks like p but is <b>r</b></li><li><b class="gl">Υ</b> looks like y but sounds <b>ee</b></li><li><b class="gl">Χ</b> looks like x but is a throaty <b>h</b>, like “loch”</li><li><b class="gl">Π</b> is simply <b>p</b></li></ul>
+  <h3>Two special features</h3>
+  <ul class="ticks"><li><b class="gl">Σ σ ς</b> has two small forms. Use <b>ς</b> only at the <b>end</b> of a word, like in φίλος.</li><li><b class="gl">Ξ</b> (ks) and <b class="gl">Ψ</b> (ps) are double sounds in one letter.</li></ul>`},
+ {type:'cards',title:'Flashcards: letters 13 to 24',intro:'Flip all 12 cards. Say each letter and example word aloud.',items:letterCards(LP2)},
+ {type:'match',title:'Match the letter to its name',intro:'Tap a letter, then tap its name.',pairs:byG(LET,['Ν','Ξ','Ο','Π','Ρ','Σ']).map(l=>({l:l.g,r:l.n,say:l.say}))},
+ {type:'match',title:'Match the letter to its sound',intro:'Tap a letter, then tap the sound it makes.',pairs:byG(LET,['Τ','Υ','Φ','Χ','Ψ','Ω']).map(l=>({l:l.g,r:l.s,say:l.say}))},
+ {type:'quiz',title:'Listening: which letter?',gen:letterListen(LP2,6)},
+ {type:'quiz',title:'Alphabet checkpoint',intro:'Letters from the whole alphabet.',gen:soundQ(LET)}
+]},
+/* ============ 4 ============ */
+{id:'pairs',title:'Letter pairs and stress',mins:6,learned:['Five ways to write the sound “ee”','Pairs like ου, αι, μπ, ντ and γκ','How stress marks and the Greek question mark work'],steps:[
+ {type:'read',title:'The sound “ee” has five spellings',html:`
+  <p class="lead">Greek spells some sounds in several ways, for historical reasons. The biggest example is <b>ee</b>:</p>
+  <div class="chips-row"><span class="big-chip">η</span><span class="big-chip">ι</span><span class="big-chip">υ</span><span class="big-chip">ει</span><span class="big-chip">οι</span></div>
+  <p>All five say <b>ee</b>. Do not worry about which to use when writing yet. When <b>reading</b>, it is easy: they are all ee.</p>
+  <p>Some letters join forces to make a sound that is not just the two letters added together. Next, flip through the most common pairs.</p>`},
+ {type:'cards',title:'Flashcards: common pairs',intro:'Flip all 8 cards.',items:[
+  {g:'ου',e:'oo as in food',r:'ου = oo',n:'ουρανός (uranós), sky',say:'ουρανός'},
+  {g:'αι',e:'e as in pet',r:'αι = e',n:'παιδί (pedhí), child',say:'παιδί'},
+  {g:'ει',e:'ee as in see',r:'ει = ee',n:'είσοδος (ísodhos), entrance',say:'είσοδος'},
+  {g:'οι',e:'ee as in see',r:'οι = ee',n:'οικογένεια (ikoyénia), family',say:'οικογένεια'},
+  {g:'μπ',e:'b as in boy',r:'μπ = b',n:'μπάνιο (bánio), bath or swim',say:'μπάνιο'},
+  {g:'ντ',e:'d as in dog',r:'ντ = d',n:'ντομάτα (domáta), tomato',say:'ντομάτα'},
+  {g:'γκ',e:'g as in go',r:'γκ = g',n:'γκρι (gri), grey',say:'γκρι'},
+  {g:'τσ',e:'ts as in cats',r:'τσ = ts',n:'τσάι (tsái), tea',say:'τσάι'}]},
+ {type:'read',title:'Stress marks and the question mark',html:`
+  <p class="lead">Every Greek word with two or more syllables has a <b>stress mark</b> (΄) on the syllable you say louder.</p>
+  <div class="mini"><b>καφές</b> → ka<b>FES</b>, not <i>KA-fes</i><br><b>θάλασσα</b> → <b>THA</b>-la-sa</div>
+  <p>The accent only shows which part to emphasise. It does not change the letter's sound.</p>
+  <h3>The Greek question mark</h3>
+  <p>It looks like an English semicolon: <b>Τι κάνεις;</b> means “How are you?”. Quotation marks are « » but you will rarely need them yet.</p>`},
+ {type:'match',title:'Match the pair to its sound',intro:'Tap a pair, then tap the sound.',pairs:[{l:'ου',r:'oo as in food'},{l:'αι',r:'e as in pet'},{l:'μπ',r:'b as in boy'},{l:'ντ',r:'d as in dog'},{l:'γκ',r:'g as in go'},{l:'τσ',r:'ts as in cats'}]},
+ {type:'quiz',title:'Pairs quiz',questions:[
+  {q:'How do you say παιδί (child)?',opts:['pedhí','paidí','pa-ee-dí','padí'],a:0,why:'αι = e, δ = dh (th as in this), ι = ee: pe-dhí, with stress on the last syllable.'},
+  {q:'How do you say μπάνιο (bath)?',opts:['bánio','mpánio','pánio','mánio'],a:0,why:'At the start of a word, μπ sounds like b.'},
+  {q:'Which pair makes the sound “oo”?',opts:['ου','ευ','οι','αυ'],a:0,why:'ου = oo, as in ουρανός (sky).'},
+  {q:'Which of these does NOT sound like “ee”?',opts:['αι','η','ει','οι'],a:0,why:'αι sounds like e (as in pet). Η, ει and οι all say ee.'},
+  {q:'ντομάτα (tomato) starts with which sound?',opts:['d as in dog','dh as in this','n as in no','t as in top'],a:0,why:'ντ at the start of a word sounds like d: domáta.'}]}
+]},
+/* ============ 5 ============ */
+{id:'reading',title:'Reading practice',mins:6,learned:['How to sound out Greek words','Eight English words written in Greek letters','Real signs and place names you will meet in Greece'],steps:[
+ {type:'read',title:'How to read a Greek word',html:`
+  <p class="lead">Reading Greek is a three-step habit:</p>
+  <ol class="steps-list"><li><b>Find the letters.</b> Take each letter or pair one at a time.</li><li><b>Say the sounds</b> slowly, then faster.</li><li><b>Listen for a word you know.</b> Many Greek words sound like English.</li></ol>
+  <p>Try it on the next screen: every word there is one you already know.</p>`},
+ {type:'type',title:'Reading detective: Greek words in disguise',intro:'Sound out the Greek word and type the English word it is.',items:[
+  {g:'ταξί',ok:['taxi','cab'],ans:'taxi',hint:'ta-xí. You can hail one in Athens.',say:'ταξί'},
+  {g:'μετρό',ok:['metro','subway','underground'],ans:'metro',hint:'me-tró. Public transport under the city.',say:'μετρό'},
+  {g:'μπαρ',ok:['bar','pub'],ans:'bar',hint:'μπ = b. Where you get a drink.',say:'μπαρ'},
+  {g:'πιάνο',ok:['piano'],ans:'piano',hint:'A musical instrument with black and white keys.',say:'πιάνο'},
+  {g:'κάμερα',ok:['camera','kamera'],ans:'camera',hint:'ká-me-ra. Used for photos.',say:'κάμερα'},
+  {g:'καφές',ok:['coffee','cafe','kafe','kafes'],ans:'coffee',hint:'ka-fés. Greeks drink a lot of it.',say:'καφές'},
+  {g:'τηλέφωνο',ok:['telephone','phone','tilefono'],ans:'telephone',hint:'ti-lé-fo-no. You call someone with it.',say:'τηλέφωνο'},
+  {g:'ελικόπτερο',ok:['helicopter','elikoptero'],ans:'helicopter',hint:'e-li-kó-pte-ro. It flies with rotor blades.',say:'ελικόπτερο'}]},
+ {type:'type',title:'Read the map: Greek places',intro:'These are real places. Type the English name.',items:[
+  {g:'Αθήνα',ok:['athens','athina'],ans:'Athens',hint:'The capital of Greece.',say:'Αθήνα'},
+  {g:'Θεσσαλονίκη',ok:['thessaloniki','salonica','thessalonica','thessaloniki greece'],ans:'Thessaloniki',hint:'Greece\'s second city, in the north.',say:'Θεσσαλονίκη'},
+  {g:'Κρήτη',ok:['crete','kriti'],ans:'Crete',hint:'The biggest Greek island.',say:'Κρήτη'},
+  {g:'Ρόδος',ok:['rhodes','rodos','rhodos'],ans:'Rhodes',hint:'An island in the Dodecanese.',say:'Ρόδος'},
+  {g:'Κύπρος',ok:['cyprus','kypros','kipros'],ans:'Cyprus',hint:'The island where Greek is also official.',say:'Κύπρος'},
+  {g:'Σαντορίνη',ok:['santorini','thira'],ans:'Santorini',hint:'Famous for white houses and sunsets.',say:'Σαντορίνη'},
+  {g:'Μύκονος',ok:['mykonos','mikonos'],ans:'Mykonos',hint:'A popular Cycladic island.',say:'Μύκονος'},
+  {g:'Κέρκυρα',ok:['corfu','kerkyra','kerkira'],ans:'Corfu',hint:'An island in the Ionian sea.',say:'Κέρκυρα'}]},
+ {type:'cards',title:'Signs you will see in Greece',intro:'Signs are often in capital letters without stress marks. Flip all the cards.',items:[
+  {g:'ΕΙΣΟΔΟΣ',e:'Entrance',r:'ísodhos',say:'είσοδος'},
+  {g:'ΕΞΟΔΟΣ',e:'Exit',r:'éxodhos',say:'έξοδος'},
+  {g:'ΑΝΟΙΧΤΟ',e:'Open',r:'aniktó',say:'ανοιχτό'},
+  {g:'ΚΛΕΙΣΤΟ',e:'Closed',r:'klistó',say:'κλειστό'},
+  {g:'ΦΑΡΜΑΚΕΙΟ',e:'Pharmacy',r:'farmakío',say:'φαρμακείο'},
+  {g:'ΑΕΡΟΔΡΟΜΙΟ',e:'Airport',r:'aerodhrómio',say:'αεροδρόμιο'},
+  {g:'ΣΤΑΣΗ',e:'Stop (bus stop)',r:'stási',say:'στάση'},
+  {g:'ΤΟΥΑΛΕΤΕΣ',e:'Toilets',r:'tualétes',say:'τουαλέτες'}]},
+ {type:'quiz',title:'Sign check',questions:[
+  {q:'You see ΕΞΟΔΟΣ above a door. What does it mean?',opts:['Exit','Entrance','Pharmacy','Open'],a:0,why:'ΕΞΟΔΟΣ is “exit”, the same word as in “exodus”.'},
+  {q:'A shop door says ΚΛΕΙΣΤΟ. What does that mean?',opts:['Closed','Open','Sale','Free'],a:0,why:'ΚΛΕΙΣΤΟ means closed. ΑΝΟΙΧΤΟ means open.'},
+  {q:'Which sign points to a pharmacy?',opts:['ΦΑΡΜΑΚΕΙΟ','ΑΕΡΟΔΡΟΜΙΟ','ΣΤΑΣΗ','ΕΙΣΟΔΟΣ'],a:0,why:'ΦΑΡΜΑΚΕΙΟ is pharmacy. Spot the “pharmak-” in it.'},
+  {q:'You are looking for the airport. Which word do you follow?',opts:['ΑΕΡΟΔΡΟΜΙΟ','ΣΤΑΣΗ','ΤΟΥΑΛΕΤΕΣ','ΕΞΟΔΟΣ'],a:0,why:'ΑΕΡΟΔΡΟΜΙΟ = aero + dromio (aerodrome).'}]}
+]},
+/* ============ 6 ============ */
+{id:'greetings',title:'Greetings and politeness',mins:8,learned:['Hello, goodbye, thank you, sorry and please','Formal and informal greetings','How to ask “How are you?” and answer'],steps:[
+ {type:'cards',title:'Essential phrases',intro:'Flip all 12 cards. Press Hear and repeat each phrase out loud.',items:PHR.map(p=>({g:p.g,e:p.e,r:p.r,say:p.say||p.g}))},
+ {type:'read',title:'Formal or friendly?',html:`
+  <p class="lead">Greek has a polite and a friendly way to say “you”.</p>
+  <div class="grid3">
+   <div class="mini"><b>σου</b> friendly<p>For friends, family, children and people your age. <b>Γεια σου</b></p></div>
+   <div class="mini"><b>σας</b> polite<p>For older people, strangers and groups. <b>Γεια σας</b></p></div>
+  </div>
+  <h3>Greetings through the day</h3>
+  <ul class="ticks"><li><b>Καλημέρα</b> until about noon</li><li><b>Καλησπέρα</b> from the afternoon on</li><li><b>Καληνύχτα</b> when you go to bed or say goodbye late at night</li></ul>
+  <p>Bonus: <b>πολύ</b> (polí) means “very” or “much”. So <b>Ευχαριστώ πολύ</b> is “thank you very much”.</p>`},
+ {type:'dialogue',title:'Listen to a short conversation',intro:'Two friends meet in the morning. Tap a line to show the translation.',lines:[
+  {w:'A',g:'Καλημέρα!',r:'Kaliméra!',e:'Good morning!'},
+  {w:'B',g:'Καλημέρα! Τι κάνεις;',r:'Kaliméra! Ti kánis?',e:'Good morning! How are you?'},
+  {w:'A',g:'Καλά, ευχαριστώ. Και εσύ;',r:'Kalá, efharistó. Ke esí?',e:'Fine, thank you. And you?'},
+  {w:'B',g:'Κι εγώ καλά. Γεια σου!',r:'Ki egó kalá. Ya soo!',e:'Me too, fine. Bye!'},
+  {w:'A',g:'Γεια σου!',r:'Ya soo!',e:'Bye!'}]},
+ {type:'match',title:'Match the Greek to the meaning',intro:'Tap a phrase, then its meaning.',pairs:[{l:'Καλημέρα',r:'Good morning',say:'Καλημέρα'},{l:'Ευχαριστώ',r:'Thank you',say:'Ευχαριστώ'},{l:'Συγγνώμη',r:'Sorry',say:'Συγγνώμη'},{l:'Καληνύχτα',r:'Good night',say:'Καληνύχτα'},{l:'Παρακαλώ',r:'Please / You are welcome',say:'Παρακαλώ'},{l:'Γεια σας',r:'Hello (formal)',say:'Γεια σας'}]},
+ {type:'quiz',title:'Listening: what did you hear?',gen:()=>{const pool=PHR.filter(p=>!/Ναι/.test(p.g));
+   return sample(pool,6).map(p=>({listen:true,say:p.say||p.g,g:p.g,q:'Listen. What does it mean?',qfb:'What does “'+p.g+'” mean?',opts:shuffle([p,...sample(pool.filter(x=>x!==p),3)]).map(x=>x.e),a:null,ans:p.e,why:p.g+' ('+p.r+') means “'+p.e+'”.'}))}},
+ {type:'order',title:'Build the sentence',intro:'Tap the words in the right order. There may be an extra word you do not need.',items:[
+  {en:'Good morning, how are you?',r:'Kaliméra, ti kánis?',t:['Καλημέρα,','τι','κάνεις;'],x:['Καληνύχτα']},
+  {en:'Fine, thank you. And you?',r:'Kalá, efharistó. Ke esí?',t:['Καλά,','ευχαριστώ.','Και','εσύ;'],x:['Συγγνώμη']},
+  {en:'Thank you very much!',r:'Efharistó polí!',t:['Ευχαριστώ','πολύ!'],x:['παρακαλώ']},
+  {en:'Yes, please.',r:'Ne, parakaló.',t:['Ναι,','παρακαλώ.'],x:['Όχι']}]}
+]},
+/* ============ 7 ============ */
+{id:'introductions',title:'Introduce yourself',mins:8,learned:['Say your name, where you are from and that you are learning','The verb “to be”: είμαι, είσαι, είναι','How to ask for help when you do not understand'],steps:[
+ {type:'read',title:'Names and “to be”',html:`
+  <p class="lead">Greek says “my name is” as <b>“they call me”</b>: <b>Με λένε Άννα</b> (me léne Ána).</p>
+  <p>To ask someone’s name, say <b>Πώς σε λένε;</b> (pos se léne?).</p>
+  <h3>The verb “to be”</h3>
+  <div class="table-scroll"><table><thead><tr><th>Greek</th><th>Say it</th><th>English</th></tr></thead><tbody>
+   <tr><td class="gr">είμαι</td><td>íme</td><td>I am</td></tr>
+   <tr><td class="gr">είσαι</td><td>íse</td><td>you are</td></tr>
+   <tr><td class="gr">είναι</td><td>íne</td><td>he, she, it is</td></tr></tbody></table></div>
+  <p>And <b>από</b> (apó) means “from”: <b>Είμαι από την Αμερική</b> = “I am from America”. Greece is <b>Ελλάδα</b> (Elládha).</p>`},
+ {type:'cards',title:'Phrases for meeting people',intro:'Flip all 8 cards and repeat them aloud.',items:[
+  {g:'Με λένε…',e:'My name is…',r:'Me léne…',say:'Με λένε'},
+  {g:'Πώς σε λένε;',e:'What is your name?',r:'Pos se léne?',say:'Πώς σε λένε;'},
+  {g:'Χαίρω πολύ',e:'Nice to meet you',r:'Héro polí',say:'Χαίρω πολύ'},
+  {g:'Είμαι από…',e:'I am from…',r:'Íme apó…',say:'Είμαι από'},
+  {g:'Μιλάω λίγα ελληνικά',e:'I speak a little Greek',r:'Miláo líga elliniká',say:'Μιλάω λίγα ελληνικά'},
+  {g:'Μαθαίνω ελληνικά',e:'I am learning Greek',r:'Mathéno elliniká',say:'Μαθαίνω ελληνικά'},
+  {g:'Δεν καταλαβαίνω',e:'I do not understand',r:'Dhen katalavéno',say:'Δεν καταλαβαίνω'},
+  {g:'Πιο αργά, παρακαλώ',e:'Slower, please',r:'Pio argá, parakaló',say:'Πιο αργά, παρακαλώ'}]},
+ {type:'dialogue',title:'Meeting someone new',intro:'Tap a line to show the translation.',lines:[
+  {w:'A',g:'Γεια σου! Πώς σε λένε;',r:'Ya soo! Pos se léne?',e:'Hi! What is your name?'},
+  {w:'B',g:'Με λένε Νίκος. Εσένα;',r:'Me léne Níkos. Eséna?',e:'My name is Nikos. And you?'},
+  {w:'A',g:'Με λένε Έμμα. Χαίρω πολύ!',r:'Me léne Ema. Héro polí!',e:'My name is Emma. Nice to meet you!'},
+  {w:'B',g:'Χαίρω πολύ! Είσαι από την Αγγλία;',r:'Héro polí! Íse apó tin Anglía?',e:'Nice to meet you! Are you from England?'},
+  {w:'A',g:'Ναι, είμαι από την Αγγλία. Μιλάω λίγα ελληνικά.',r:'Ne, íme apó tin Anglía. Miláo líga elliniká.',e:'Yes, I am from England. I speak a little Greek.'},
+  {w:'B',g:'Μιλάς πολύ καλά!',r:'Milás polí kalá!',e:'You speak very well!'}]},
+ {type:'order',title:'Build the sentence',intro:'Tap the words in the right order.',items:[
+  {en:'My name is Maria.',r:'Me léne María.',t:['Με','λένε','Μαρία.'],x:['Είμαι']},
+  {en:'I am from America.',r:'Íme apó tin Ameriki.',t:['Είμαι','από','την','Αμερική.'],x:['λένε']},
+  {en:'I speak a little Greek.',r:'Miláo líga elliniká.',t:['Μιλάω','λίγα','ελληνικά.'],x:['Μαθαίνω']},
+  {en:'Nice to meet you!',r:'Héro polí!',t:['Χαίρω','πολύ!'],x:['Συγγνώμη']}]},
+ {type:'quiz',title:'Fill the gap and check',questions:[
+  {q:'Με ____ Μαρία. (My name is Maria.)',opts:['λένε','είμαι','χαίρω','καλά'],a:0,why:'“Με λένε” = “my name is”.'},
+  {q:'____ από την Αμερική. (I am from America.)',opts:['Είμαι','Λένε','Χαίρω','Ευχαριστώ'],a:0,why:'Είμαι = I am.'},
+  {q:'How do you ask “What is your name?”',opts:['Πώς σε λένε;','Τι κάνεις;','Είσαι από πού;','Με λένε…'],a:0,why:'Πώς σε λένε; (pos se léne?) is the question. Με λένε… is the answer.'},
+  {q:'What does Δεν καταλαβαίνω mean?',opts:['I do not understand','I am learning','I am from…','Thank you very much'],a:0,why:'Δεν καταλαβαίνω is a lifesaver. Add “Πιο αργά, παρακαλώ” for “slower, please”.'},
+  {q:'Είσαι από την Ελλάδα; asks…',opts:['Are you from Greece?','Am I from Greece?','Is he from Greece?','Where is Greece?'],a:0,why:'Είσαι = you are. Ελλάδα = Greece.'}]},
+ {type:'builder',title:'Build your own introduction'}
+]},
+/* ============ 8 ============ */
+{id:'numbers',title:'Numbers 0 to 10',mins:7,learned:['Counting from μηδέν (0) to δέκα (10)','How to read prices in euros','That 1, 3 and 4 change with gender'],steps:[
+ {type:'cards',title:'Flashcards: numbers',intro:'Flip all 11 cards, listen, and count out loud.',items:NUM.map(n=>({g:n[0],e:n[1],r:n[2]+' · '+n[3],say:n[1].split(' ')[0]}))},
+ {type:'match',title:'Match the number to its Greek word',intro:'Tap a digit, then the Greek word.',pairs:[1,2,3,4,5,6].map(i=>({l:NUM[i][0],r:NUM[i][1]+' ('+NUM[i][2]+')',say:NUM[i][1]}))},
+ {type:'quiz',title:'Listening: which number?',gen:()=>sample(NUM,7).map(n=>({listen:true,say:n[1],g:n[1],q:'Listen. Which number is this?',qfb:'Which number is “'+n[1]+'”?',opts:shuffle([n,...sample(NUM.filter(x=>x!==n),3)]).map(x=>x[0]),a:null,ans:n[0],why:n[1]+' ('+n[2]+') is '+n[0]+'.'}))},
+ {type:'read',title:'Counting and prices',html:`
+  <p class="lead">To ask the price, say <b>Πόσο κάνει;</b> (póso káni?), “How much is it?”.</p>
+  <p>The answer is a number plus <b>ευρώ</b> (evró): <b>Πέντε ευρώ</b> = “five euros”.</p>
+  <h3>Numbers that change</h3>
+  <p>1, 3 and 4 change with the gender of the thing you count:</p>
+  <div class="table-scroll"><table><thead><tr><th>Number</th><th>Masculine</th><th>Feminine</th><th>Neuter</th></tr></thead><tbody>
+   <tr><td>1</td><td class="gr">ένας</td><td class="gr">μία</td><td class="gr">ένα</td></tr>
+   <tr><td>3</td><td class="gr">τρεις</td><td class="gr">τρεις</td><td class="gr">τρία</td></tr>
+   <tr><td>4</td><td class="gr">τέσσερις</td><td class="gr">τέσσερις</td><td class="gr">τέσσερα</td></tr></tbody></table></div>
+  <p class="note">For now, use the neuter forms <b>ένα, τρία, τέσσερα</b> when you count. People will understand you.</p>`},
+ {type:'type',title:'Decode the numbers',intro:'Type the digit for each Greek number.',items:[
+  {g:'πέντε',ok:['5','five'],ans:'5',hint:'pén-de',say:'πέντε'},
+  {g:'δέκα',ok:['10','ten'],ans:'10',hint:'dhé-ka. Think decade.',say:'δέκα'},
+  {g:'τρία',ok:['3','three'],ans:'3',hint:'trí-a',say:'τρία'},
+  {g:'έξι',ok:['6','six'],ans:'6',hint:'é-xi, like “hexagon”.',say:'έξι'},
+  {g:'δύο',ok:['2','two'],ans:'2',hint:'dhí-o',say:'δύο'},
+  {g:'μηδέν',ok:['0','zero'],ans:'0',hint:'mi-dhén',say:'μηδέν'}]},
+ {type:'quiz',title:'Prices quiz',questions:[
+  {q:'Ο καφές κάνει δύο ευρώ. How much is the coffee?',opts:['2 euros','3 euros','10 euros','12 euros'],a:0,why:'δύο = 2.'},
+  {q:'Πόσο κάνει; – Πέντε ευρώ. The price is…',opts:['5 euros','6 euros','15 euros','50 euros'],a:0,why:'πέντε = 5.'},
+  {q:'Which number is δέκα?',opts:['10','4','9','1'],a:0,why:'δέκα = 10.'},
+  {q:'What does Πόσο κάνει; mean?',opts:['How much is it?','Where is it?','What is it?','Who is it?'],a:0,why:'Πόσο κάνει; is the phrase you will use in every shop.'},
+  {q:'Which is correct for “one coffee” (καφές is masculine)?',opts:['ένας καφές','μία καφές','ένα καφές','ενός καφές'],a:0,why:'Καφές is masculine, so “one” is ένας. In the shop people also say “έναν καφέ” when ordering, which you will meet in the next course.'}]}
+]},
+/* ============ 9 ============ */
+{id:'final',title:'Final challenge',mins:6,learned:['You finished Introduction to Greek!'],steps:[
+ {type:'read',title:'Ready for the challenge?',html:`
+  <p class="lead">Twelve questions across everything you learned. You need <b>9 out of 12 (70%)</b> to pass.</p>
+  <ul class="ticks"><li>Take your time and sound words out loud.</li><li>You can retry as often as you like.</li><li>Unsure about something? Use the units list on the left to review first.</li></ul>`},
+ {type:'quiz',title:'Final challenge',exam:true,pass:.7,questions:[
+  {q:'Which sound does Β make?',opts:['v','b','p','d'],a:0,why:'Β is vita, a v sound.'},
+  {q:'Which letter is the “th” in think?',opts:['Θ','Δ','Φ','Ψ'],a:0,why:'Θ (thita) is the th of think.'},
+  {q:'Η makes the sound…',opts:['ee','h','eh','n'],a:0,why:'Η (ita) is ee.'},
+  {q:'ουρανός starts with which sound?',opts:['oo','ow','o','u as in cup'],a:0,why:'ου = oo.'},
+  {q:'ντομάτα starts with which sound?',opts:['d','n','t','dh'],a:0,why:'ντ = d at the start of a word.'},
+  {q:'What does ΕΞΟΔΟΣ mean?',opts:['Exit','Entrance','Pharmacy','Airport'],a:0,why:'ΕΞΟΔΟΣ = exit.'},
+  {q:'How do you say “Good morning”?',opts:['Καλημέρα','Καληνύχτα','Συγγνώμη','Παρακαλώ'],a:0,why:'Καλημέρα = good morning.'},
+  {q:'Which greeting is polite for an older stranger?',opts:['Γεια σας','Γεια σου','Καληνύχτα','Ναι'],a:0,why:'Σας is the polite form.'},
+  {q:'Με λένε Άννα means…',opts:['My name is Anna','I am Anna’s friend','Anna is here','Thank you, Anna'],a:0,why:'Με λένε = my name is.'},
+  {q:'Είμαι από την Αμερική means…',opts:['I am from America','I like America','Where is America?','I live in America'],a:0,why:'Είμαι από… = I am from…'},
+  {q:'Which number is δέκα?',opts:['10','4','5','1'],a:0,why:'δέκα = 10.'},
+  {q:'What does Ευχαριστώ mean?',opts:['Thank you','Sorry','Please','Hello'],a:0,why:'Ευχαριστώ = thank you.'}]},
+ {type:'finish',title:'Course complete'}
+]}
+];
+
+/* add summary screens */
+UNITS.forEach(u=>{if(u.id!=='final')u.steps.push({type:'summary',title:'Unit complete'});u.steps.forEach((s,i)=>s.id=u.id+'-'+i)});
+const TOTAL=UNITS.reduce((n,u)=>n+u.steps.length,0);
+
+/* ---------- state ---------- */
+const fresh=()=>({done:{},scores:{},pos:[0,0],secs:0,exam:null,name:''});
+let state;
+try{state=Object.assign(fresh(),JSON.parse(localStorage.getItem(KEY)||'{}'))}catch(e){state=fresh()}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}};
+const doneCount=()=>Object.keys(state.done).length;
+const pct=()=>Math.round(doneCount()/TOTAL*100);
+
+/* ---------- step renderers ---------- */
+function mountRead(root,step,ctx){root.append(h('div',{class:'prose',html:step.html}));ctx.complete()}
+
+function mountCards(root,step,ctx){
+  const items=step.items;let i=0,flipped=false;const seen=new Set();
+  if(step.intro)root.append(h('p',{class:'intro'},step.intro));
+  const counter=h('div',{class:'fc-count'});
+  const front=h('div',{class:'fc-face fc-front'}),back=h('div',{class:'fc-face fc-back'});
+  const card=h('button',{type:'button',class:'fc'},front,back);
+  const dots=h('div',{class:'fc-dots','aria-hidden':'true'},items.map(()=>h('span')));
+  const audio=h('div',{class:'fc-audio'});
+  const prev=h('button',{type:'button',class:'btn ghost small',onclick:()=>{i=(i-1+items.length)%items.length;draw()}},'← Prev');
+  const next=h('button',{type:'button',class:'btn ghost small',onclick:()=>{i=(i+1)%items.length;draw()}},'Next →');
+  function draw(){flipped=false;card.classList.remove('flipped');const it=items[i];
+    front.replaceChildren(h('div',{class:'fc-big'+(it.g.length>6?' long':'')},it.g),h('div',{class:'fc-hint'},'Tap to flip'));
+    back.replaceChildren(h('div',{class:'fc-title'},it.e),it.r&&h('div',{class:'fc-sub'},it.r),it.n&&h('div',{class:'fc-note'},it.n));
+    counter.textContent='Card '+(i+1)+' of '+items.length+' · flipped '+seen.size+'/'+items.length;
+    [...dots.children].forEach((d,k)=>{d.className=(seen.has(k)?'seen ':'')+(k===i?'cur':'')});
+    card.setAttribute('aria-label','Card '+(i+1)+': '+it.g+'. Press to flip.');
+    audio.replaceChildren(it.say?sayBtn(it.say,'Hear it'):null,it.say2?sayBtn(it.say2,it.lab2||'Hear example'):null)}
+  card.addEventListener('click',()=>{flipped=!flipped;card.classList.toggle('flipped',flipped);
+    if(flipped){seen.add(i);[...dots.children].forEach((d,k)=>{d.className=(seen.has(k)?'seen ':'')+(k===i?'cur':'')});
+      counter.textContent='Card '+(i+1)+' of '+items.length+' · flipped '+seen.size+'/'+items.length;
+      if(seen.size===items.length)ctx.complete()}});
+  root.addEventListener('keydown',e=>{if(e.key==='ArrowRight')next.click();if(e.key==='ArrowLeft')prev.click()});
+  root.append(counter,card,audio,h('div',{class:'fc-nav'},prev,dots,next));draw()}
+
+function mountMatch(root,step,ctx){
+  if(step.intro)root.append(h('p',{class:'intro'},step.intro));
+  const pairs=step.pairs.map((p,k)=>Object.assign({id:k},p));
+  let sel=null,matched=0,misses=0;
+  const status=h('div',{class:'status',role:'status','aria-live':'polite'},'0 of '+pairs.length+' matched');
+  const colL=h('div',{class:'mcol'}),colR=h('div',{class:'mcol'});
+  const mk=(p,side)=>h('button',{type:'button',class:'mt '+(side==='l'?'mt-l':'mt-r'),'data-id':p.id,'data-side':side,onclick:ev=>click(ev.currentTarget)},side==='l'?p.l:p.r);
+  shuffle(pairs).forEach(p=>colL.append(mk(p,'l')));shuffle(pairs).forEach(p=>colR.append(mk(p,'r')));
+  function click(b){
+    if(b.classList.contains('ok'))return;
+    if(!sel||sel.dataset.side===b.dataset.side){if(sel)sel.classList.remove('sel');sel=b;b.classList.add('sel');return}
+    const a=sel,c=b;sel=null;a.classList.remove('sel');
+    if(a.dataset.id===c.dataset.id){[a,c].forEach(x=>{x.classList.add('ok');x.disabled=true});matched++;
+      const p=pairs[+a.dataset.id];if(p.say)speak(p.say);
+      status.textContent=matched+' of '+pairs.length+' matched';
+      if(matched===pairs.length){state.scores[step.id]={c:pairs.length,t:pairs.length+misses};status.textContent='All matched! '+(misses?misses+' mistake'+(misses>1?'s':''):'No mistakes')+'.';status.classList.add('good');ctx.complete()}}
+    else{misses++;[a,c].forEach(x=>x.classList.add('bad'));setTimeout(()=>[a,c].forEach(x=>x.classList.remove('bad')),550)}}
+  root.append(h('div',{class:'mgrid'},colL,colR),status)}
+
+function mountQuiz(root,step,ctx){
+  let qs;
+  const exam=!!step.exam;
+  function start(){
+    qs=(step.gen?step.gen():step.questions).map(q=>{
+      const correct=q.ans!=null?q.ans:q.opts[q.a];
+      const opts=exam||q.gen?shuffle(q.opts):shuffle(q.opts);
+      return Object.assign({},q,{opts,correct})});
+    if(exam)qs=shuffle(qs);
+    let i=0,score=0,answered=false;
+    root.replaceChildren();
+    if(step.intro)root.append(h('p',{class:'intro'},step.intro));
+    const prog=h('div',{class:'q-prog'}),bar=h('div',{class:'bar'},h('i'));
+    const box=h('div',{class:'q-box'});root.append(prog,bar,box);
+    function show(){
+      answered=false;const q=qs[i];
+      prog.textContent='Question '+(i+1)+' of '+qs.length+(exam?' · pass mark '+Math.ceil(qs.length*step.pass)+'/'+qs.length:'');
+      bar.firstChild.style.width=(i/qs.length*100)+'%';
+      const promptEls=[];
+      if(q.listen&&hasAudio()){promptEls.push(h('div',{class:'q-text'},q.q),h('div',{class:'q-audio'},sayBtn(q.say,'Play',' big')));setTimeout(()=>speak(q.say),250)}
+      else if(q.listen){promptEls.push(h('div',{class:'q-text'},q.qfb||q.q),q.g&&!q.qfb?h('div',{class:'q-big'},q.g):null)}
+      else promptEls.push(h('div',{class:'q-text'},q.q));
+      const fb=h('div',{class:'feedback',role:'status','aria-live':'polite'});
+      const nextBtn=h('button',{type:'button',class:'btn small',hidden:true,onclick:()=>{i++;if(i<qs.length)show();else finish()}},i===qs.length-1?'See results':'Next question');
+      const opts=h('div',{class:'opts'},q.opts.map(o=>{
+        const b=h('button',{type:'button',class:'opt','data-ok':o===q.correct?'1':'0',onclick:()=>{
+          if(answered)return;answered=true;
+          const ok=o===q.correct;if(ok)score++;
+          [...opts.children].forEach(x=>{x.disabled=true;if(x.dataset.ok==='1')x.classList.add('right')});
+          if(!ok)b.classList.add('wrong');
+          fb.className='feedback '+(ok?'good':'bad');
+          fb.replaceChildren(h('b',{},ok?'Correct! ':'Not quite. '),q.why||'');
+          nextBtn.hidden=false;nextBtn.focus()}},o);return b}));
+      box.replaceChildren(...promptEls.filter(Boolean),opts,fb,nextBtn)}
+    function finish(){
+      bar.firstChild.style.width='100%';
+      const t=qs.length,passed=!exam||score/t>=step.pass;
+      state.scores[step.id]={c:score,t};
+      if(exam)state.exam={c:score,t};
+      save();
+      const msg=exam?(passed?'You passed! Congratulations.':'Not quite there. You need '+Math.ceil(t*step.pass)+' correct. Review a unit and try again.'):(score===t?'Perfect score!':score/t>=.6?'Nice work.':'Keep going. Retry to lock it in.');
+      box.replaceChildren(h('div',{class:'result'},h('div',{class:'result-score'},score+' / '+t),h('p',{class:'result-msg'},msg),
+        h('button',{type:'button',class:'btn ghost small',onclick:start},'Try again')));
+      prog.textContent='Results';
+      if(passed)ctx.complete();}
+    show()}
+  start()}
+
+function mountType(root,step,ctx){
+  if(step.intro)root.append(h('p',{class:'intro'},step.intro));
+  const items=step.items;let i=0,first=0,tries=0,finished=false;
+  const prog=h('div',{class:'q-prog'}),box=h('div',{class:'q-box'});root.append(prog,box);
+  function show(){tries=0;const it=items[i];
+    prog.textContent='Word '+(i+1)+' of '+items.length;
+    const input=h('input',{type:'text',class:'type-in',autocomplete:'off',autocapitalize:'none',spellcheck:'false',placeholder:'Type your answer','aria-label':'Your answer'});
+    const fb=h('div',{class:'feedback',role:'status','aria-live':'polite'});
+    const nextBtn=h('button',{type:'button',class:'btn small',hidden:true,onclick:()=>{i++;if(i<items.length)show();else done()}},i===items.length-1?'Finish':'Next word');
+    const check=h('button',{type:'button',class:'btn small',onclick:submit},'Check');
+    const hint=h('button',{type:'button',class:'btn ghost small',onclick:()=>{fb.className='feedback';fb.textContent='Hint: '+it.hint}},'Hint');
+    const reveal=h('button',{type:'button',class:'btn ghost small',onclick:()=>{lock();fb.className='feedback bad';fb.replaceChildren(h('b',{},'Answer: '),it.ans);}},'Show answer');
+    function lock(){input.disabled=check.disabled=hint.disabled=reveal.disabled=true;nextBtn.hidden=false;nextBtn.focus()}
+    function submit(){const v=norm(input.value);if(!v)return;tries++;
+      if(it.ok.map(norm).includes(v)){if(tries===1)first++;lock();fb.className='feedback good';fb.replaceChildren(h('b',{},'Yes! '),it.g+' = '+it.ans+'.');if(it.say&&hasAudio())speak(it.say)}
+      else{fb.className='feedback bad';fb.textContent='Not yet. Sound it out letter by letter, or press Hint.';input.select()}}
+    input.addEventListener('keydown',e=>{if(e.key==='Enter')submit()});
+    box.replaceChildren(h('div',{class:'q-big word'},it.g),it.say?h('div',{class:'q-audio'},sayBtn(it.say,'Hear it')):null,input,h('div',{class:'row-btns'},check,hint,reveal),fb,nextBtn);
+    input.focus()}
+  function done(){state.scores[step.id]={c:first,t:items.length};box.replaceChildren(h('div',{class:'result'},h('div',{class:'result-score'},first+' / '+items.length),h('p',{class:'result-msg'},'first-try answers. Nicely decoded!')));prog.textContent='Done';ctx.complete()}
+  show()}
+
+function mountOrder(root,step,ctx){
+  if(step.intro)root.append(h('p',{class:'intro'},step.intro));
+  const items=step.items;let i=0,first=0;
+  const prog=h('div',{class:'q-prog'}),box=h('div',{class:'q-box'});root.append(prog,box);
+  function show(){const it=items[i];let tries=0;
+    prog.textContent='Sentence '+(i+1)+' of '+items.length;
+    const target=it.t.join(' ');let chosen=[];
+    const bank=shuffle(it.t.concat(it.x||[]).map((w,k)=>({w,k})));
+    const line=h('div',{class:'o-line','aria-label':'Your sentence'});
+    const bankEl=h('div',{class:'o-bank'});
+    const fb=h('div',{class:'feedback',role:'status','aria-live':'polite'});
+    const nextBtn=h('button',{type:'button',class:'btn small',hidden:true,onclick:()=>{i++;if(i<items.length)show();else done()}},i===items.length-1?'Finish':'Next sentence');
+    const check=h('button',{type:'button',class:'btn small',onclick:()=>{
+      if(!chosen.length)return;tries++;
+      const ok=chosen.map(c=>c.w).join(' ')===target;
+      if(ok){if(tries===1)first++;fb.className='feedback good';fb.replaceChildren(h('b',{},'Correct! '),target+'  ('+it.r+')');check.disabled=true;[...bankEl.children,...line.children].forEach(b=>b.disabled=true);nextBtn.hidden=false;nextBtn.focus();if(hasAudio())speak(target)}
+      else{fb.className='feedback bad';fb.textContent='Not quite. Tap a word in your sentence to remove it, then try again.'}}},'Check');
+    function draw(){
+      line.replaceChildren(...chosen.map(c=>h('button',{type:'button',class:'tok in',onclick:()=>{chosen=chosen.filter(x=>x!==c);draw()}},c.w)));
+      if(!chosen.length)line.append(h('span',{class:'o-ph'},'Tap words below'));
+      bankEl.replaceChildren(...bank.filter(b=>!chosen.includes(b)).map(b=>h('button',{type:'button',class:'tok',onclick:()=>{chosen.push(b);draw()}},b.w)))}
+    box.replaceChildren(h('div',{class:'q-text'},'Translate: “'+it.en+'”'),line,bankEl,h('div',{class:'row-btns'},check),fb,nextBtn);draw()}
+  function done(){state.scores[step.id]={c:first,t:items.length};box.replaceChildren(h('div',{class:'result'},h('div',{class:'result-score'},first+' / '+items.length),h('p',{class:'result-msg'},'sentences right on the first try.')));prog.textContent='Done';ctx.complete()}
+  show()}
+
+function mountDialogue(root,step,ctx){
+  if(step.intro)root.append(h('p',{class:'intro'},step.intro));
+  const wrap=h('div',{class:'dlg'});
+  step.lines.forEach(l=>{
+    const tr=h('div',{class:'dlg-tr',hidden:true},h('div',{class:'dlg-r'},l.r),h('div',{class:'dlg-e'},l.e));
+    const b=h('div',{class:'dlg-line '+(l.w==='A'?'a':'b')},
+      h('div',{class:'dlg-g',role:'button',tabindex:0,onclick:()=>{tr.hidden=!tr.hidden},onkeydown:e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();tr.hidden=!tr.hidden}}},l.g),
+      sayBtn(l.g,'Hear it','small'),tr);wrap.append(b)});
+  const all=h('button',{type:'button',class:'btn ghost small',onclick:()=>{const hide=[...wrap.querySelectorAll('.dlg-tr')].some(t=>t.hidden);wrap.querySelectorAll('.dlg-tr').forEach(t=>t.hidden=!hide);all.textContent=hide?'Hide translations':'Show all translations'}},'Show all translations');
+  const play=h('button',{type:'button',class:'btn ghost small',onclick:()=>{if(!hasAudio()){speak('');return}
+      speechSynthesis.cancel();step.lines.forEach(l=>{const u=new SpeechSynthesisUtterance(l.g);u.voice=voice;u.lang=voice.lang;u.rate=.85;speechSynthesis.speak(u)})}},'Play whole conversation');
+  root.append(h('div',{class:'row-btns'},all,play),wrap);ctx.complete()}
+
+const COUNTRIES=[['United States','από την Αμερική','apó tin Amerikí'],['England','από την Αγγλία','apó tin Anglía'],['Scotland','από τη Σκωτία','apó ti Skotía'],['Ireland','από την Ιρλανδία','apó tin Irlandhía'],['Australia','από την Αυστραλία','apó tin Afstralía'],['Canada','από τον Καναδά','apó ton Kanadhá'],['New Zealand','από τη Νέα Ζηλανδία','apó ti Néa Zilandhía'],['South Africa','από τη Νότια Αφρική','apó ti Nótia Afrikí']];
+function mountBuilder(root,step,ctx){
+  root.append(h('p',{class:'intro'},'Time to make it personal. Enter your name and country and we will build your Greek introduction.'));
+  const name=h('input',{type:'text',class:'type-in',placeholder:'Your first name (English letters are fine)','aria-label':'Your name',maxlength:'24',value:state.name||''});
+  const sel=h('select',{class:'type-in','aria-label':'Your country'},COUNTRIES.map((c,i)=>h('option',{value:i},c[0])));
+  const out=h('div',{class:'dlg'});
+  const go=h('button',{type:'button',class:'btn small',onclick:build},'Build my introduction');
+  function build(){
+    const n=name.value.trim();if(!n){name.focus();toast('Type your name first.');return}
+    state.name=n;save();const c=COUNTRIES[+sel.value];
+    const lines=[['Γεια σου!','Ya soo!','Hello!'],['Με λένε '+n+'.','Me léne '+n+'.','My name is '+n+'.'],['Είμαι '+c[1]+'.','Íme '+c[2]+'.','I am from '+c[0]+'.'],['Μαθαίνω ελληνικά.','Mathéno elliniká.','I am learning Greek.'],['Χαίρω πολύ!','Héro polí!','Nice to meet you!']];
+    out.replaceChildren(...lines.map(l=>h('div',{class:'dlg-line a'},h('div',{class:'dlg-g'},l[0]),sayBtn(l[0],'Hear it','small'),h('div',{class:'dlg-tr'},h('div',{class:'dlg-r'},l[1]),h('div',{class:'dlg-e'},l[2])))));
+    out.append(h('p',{class:'note'},'Say these five lines out loud three times. You just introduced yourself in Greek!'));
+    ctx.complete()}
+  root.append(h('div',{class:'form-row'},name,sel),h('div',{class:'row-btns'},go),out)}
+
+function mountSummary(root,step,ctx,u){
+  const unit=UNITS[u];
+  root.append(h('div',{class:'celebrate'},h('div',{class:'cel-g'},'Μπράβο!'),h('p',{class:'cel-t'},'Unit '+(u+1)+' complete: '+unit.title)),
+    h('h3',{},'What you learned'),h('ul',{class:'ticks'},unit.learned.map(t=>h('li',{},t))));
+  ctx.complete()}
+
+function mountFinish(root,step,ctx){
+  const sc=Object.values(state.scores);const c=sc.reduce((a,x)=>a+x.c,0),t=sc.reduce((a,x)=>a+x.t,0);
+  const acc=t?Math.round(c/t*100):0,mins=Math.max(1,Math.round(state.secs/60));
+  root.append(h('div',{class:'celebrate big'},h('div',{class:'cel-g'},'Συγχαρητήρια!'),h('p',{class:'cel-t'},'You completed Introduction to Greek'+(state.name?', '+state.name:'')+'.')),
+    h('div',{class:'stats'},
+      h('div',{class:'stat'},h('b',{},'24'),'letters learned'),
+      h('div',{class:'stat'},h('b',{},mins+' min'),'time studied'),
+      h('div',{class:'stat'},h('b',{},acc+'%'),'activity accuracy'),
+      h('div',{class:'stat'},h('b',{},state.exam?state.exam.c+'/'+state.exam.t:'-'),'final challenge')),
+    h('h3',{},'What next?'),
+    h('p',{},'Reading is only half of Greek. A tutor helps you speak with confidence, fixes your pronunciation and builds lessons around your goals.'),
+    h('div',{class:'row-btns'},h('a',{class:'btn',href:'index.html#contact'},'Find my Greek tutor'),h('a',{class:'btn ghost',href:'courses.html'},'See more courses')),
+    h('p',{class:'note'},'More courses are coming soon: Greek in everyday life, grammar basics and travel Greek.'));
+  ctx.complete()}
+
+/* ---------- engine ---------- */
+const MOUNT={read:mountRead,cards:mountCards,match:mountMatch,quiz:mountQuiz,type:mountType,order:mountOrder,dialogue:mountDialogue,builder:mountBuilder,summary:mountSummary,finish:mountFinish};
+const stage=$('#stage'),side=$('#side-list'),backBtn=$('#back'),nextBtn=$('#next'),topbar=$('#topbar-fill'),pctEl=$('#pct'),crumb=$('#crumb'),stepTitle=$('#step-title'),dotsEl=$('#step-dots');
+let U=state.pos[0],S=state.pos[1];
+if(!UNITS[U]||!UNITS[U].steps[S]){U=0;S=0}
+
+function stepDone(u,s){return !!state.done[UNITS[u].steps[s].id]}
+function go(u,s){U=u;S=s;state.pos=[u,s];save();render();window.scrollTo({top:$('#course').offsetTop-80,behavior:'smooth'})}
+function render(){
+  const unit=UNITS[U],step=unit.steps[S];
+  try{speechSynthesis&&speechSynthesis.cancel()}catch(e){}
+  crumb.textContent='Unit '+(U+1)+' of '+UNITS.length+' · '+unit.title;
+  stepTitle.textContent=step.title;
+  stage.replaceChildren();stage.scrollTop=0;
+  dotsEl.replaceChildren(...unit.steps.map((s,k)=>h('button',{type:'button',class:'sd'+(k===S?' cur':'')+(state.done[s.id]?' done':''),'aria-label':'Step '+(k+1)+': '+s.title,onclick:()=>go(U,k)})));
+  const ctx={complete(){if(!state.done[step.id]){state.done[step.id]=true;save()}refreshNav();refreshSide()}};
+  const root=h('div',{class:'step step-'+step.type});stage.append(root);
+  try{MOUNT[step.type](root,step,ctx,U)}catch(e){console.error(e);root.append(h('p',{class:'feedback bad'},'Something went wrong loading this activity. Press Continue.'));ctx.complete()}
+  refreshNav();refreshSide();
+}
+function refreshNav(){
+  const unit=UNITS[U],last=S===unit.steps.length-1,lastUnit=U===UNITS.length-1;
+  backBtn.disabled=U===0&&S===0;
+  nextBtn.hidden=last&&lastUnit;
+  nextBtn.textContent=last?'Next unit →':'Continue →';
+  nextBtn.disabled=!stepDone(U,S);
+  const p=pct();topbar.style.width=p+'%';pctEl.textContent=p+'% complete';
+  [...dotsEl.children].forEach((d,k)=>{if(!unit.steps[k])return;d.classList.toggle('done',stepDone(U,k));d.classList.toggle('cur',k===S)});
+}
+function refreshSide(){
+  side.replaceChildren(...UNITS.map((u,i)=>{
+    const d=u.steps.filter(s=>state.done[s.id]).length,all=d===u.steps.length;
+    return h('li',{},h('button',{type:'button',class:'unit-btn'+(i===U?' cur':'')+(all?' all':''),onclick:()=>{go(i,firstOpen(i));$('#side').classList.remove('open')}},
+      h('span',{class:'u-num'},all?'✓':String(i+1)),h('span',{class:'u-body'},h('b',{},u.title),h('small',{},d+'/'+u.steps.length+' steps · ~'+u.mins+' min'))))}))}
+function firstOpen(i){const k=UNITS[i].steps.findIndex(s=>!state.done[s.id]);return k<0?0:k}
+backBtn.addEventListener('click',()=>{if(S>0)go(U,S-1);else if(U>0)go(U-1,UNITS[U-1].steps.length-1)});
+nextBtn.addEventListener('click',()=>{const unit=UNITS[U];if(S<unit.steps.length-1)go(U,S+1);else if(U<UNITS.length-1)go(U+1,0)});
+$('#units-toggle').addEventListener('click',()=>$('#side').classList.toggle('open'));
+$('#reset').addEventListener('click',()=>{if(confirm('Reset all progress for this course on this device?')){state=fresh();save();go(0,0)}});
+
+/* time tracker */
+setInterval(()=>{if(!document.hidden){state.secs++;if(state.secs%10===0)save()}},1000);
+addEventListener('beforeunload',save);
+
+updateAudioChip();
+render();
+window.AlphabetaCourse={UNITS,go,get state(){return state},TOTAL};
+})();
+
+</script>
+</body>
+</html>
