@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Learn Greek Online: Native Greek Tutors + Free Lessons | Alphabeta</title>
+<meta name="description" content="Learn Greek online with native Greek tutors and free beginner lessons. Share your level, goals and timezone and get matched for one-to-one lessons.">
+<meta name="keywords" content="learn Greek, Greek tutor, online Greek lessons, Greek classes for English speakers, learn Greek for beginners, Greek language course">
+<link rel="canonical" href="https://YOUR-USERNAME.github.io/alphabeta/">
+<meta name="theme-color" content="#EB6345">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Alphabeta: learn Greek with native tutors and free lessons">
+<meta property="og:description" content="Free Greek lessons for English speakers, plus one-to-one tutors matched to your goals and timezone.">
+<meta property="og:url" content="https://YOUR-USERNAME.github.io/alphabeta/">
+<meta property="og:image" content="https://YOUR-USERNAME.github.io/alphabeta/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%23EB6345'/><text x='50' y='72' font-size='64' font-weight='800' text-anchor='middle' fill='white' font-family='sans-serif'>Α</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --coral:#EB6345;--coral-dark:#D4502F;--ink:#17171C;--white:#fff;--peach:#FFF0EB;--sand:#F8F6F3;
+  --muted:#6A6A74;--line:#E9E5E1;--radius:24px;
+  --display:"Bricolage Grotesque",system-ui,sans-serif;--body:"DM Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:var(--body);color:var(--ink);background:var(--white);line-height:1.65;font-size:1.05rem;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+a{color:var(--coral-dark);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1160px,92%);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);line-height:1.08;letter-spacing:-.025em}
+h1{font-size:clamp(2.6rem,6vw,4.9rem);font-weight:800}
+h2{font-size:clamp(2rem,4vw,3.1rem);font-weight:800;margin-bottom:.5em}
+h3{font-size:1.35rem;font-weight:700;margin-bottom:.35em}
+p{max-width:62ch}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:.6rem 1rem;border-radius:8px;z-index:100}
+.skip:focus{left:8px}
+#progress{position:fixed;top:0;left:0;height:4px;width:0;background:var(--coral);z-index:80}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .2s}
+.nav.scrolled{border-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-family:var(--display);font-weight:800;font-size:1.55rem;color:var(--ink);letter-spacing:-.04em}
+.logo span{color:var(--coral)}
+.logo:hover{text-decoration:none}
+.nav ul{display:flex;gap:1.9rem;list-style:none;align-items:center}
+.nav ul a{color:var(--ink);font-weight:500;font-size:.98rem}
+.btn{display:inline-block;background:var(--coral);color:#fff!important;font-weight:700;padding:.9rem 1.7rem;border-radius:999px;border:0;cursor:pointer;font:inherit;font-weight:700;transition:transform .15s,background .15s}
+.btn:hover{background:var(--coral-dark);transform:translateY(-2px);text-decoration:none}
+.btn.dark{background:var(--ink)}.btn.dark:hover{background:#000}
+.btn.sun{background:#fff;color:var(--ink)!important}.btn.sun:hover{background:var(--peach)}
+.btn.ghost{background:transparent;color:var(--ink)!important;border:2px solid var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff!important}
+.menu-btn{display:none;background:none;border:0;font-size:1.7rem;cursor:pointer;color:var(--ink)}
+
+/* hero */
+.hero{position:relative;padding:5rem 0 5.5rem;overflow:hidden;background:linear-gradient(180deg,var(--peach),#fff 85%)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+.hero p.lead{font-size:1.25rem;color:var(--muted);margin:1.4rem 0 2rem}
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap}
+.hero-note{margin-top:1.4rem;font-size:.95rem;color:var(--muted)}
+.chat{background:#fff;border-radius:28px;padding:1.4rem;box-shadow:0 30px 70px rgba(23,23,28,.14);display:grid;gap:.9rem;position:relative}
+.chat-head{display:flex;gap:.8rem;align-items:center;padding-bottom:.9rem;border-bottom:1px solid var(--line)}
+.avatar{width:44px;height:44px;border-radius:50%;background:var(--coral);color:#fff;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:1.3rem}
+.chat-head b{display:block;line-height:1.2}.chat-head small{color:var(--muted)}
+.bubble{padding:.8rem 1.1rem;border-radius:18px;max-width:88%;font-size:.98rem;line-height:1.45}
+.bubble.me{background:var(--sand);justify-self:end;border-bottom-right-radius:4px}
+.bubble.tutor{background:var(--peach);border-bottom-left-radius:4px}
+.bubble.tutor b{font-family:var(--display);font-size:1.15rem;color:var(--coral-dark)}
+.chat .bubble{opacity:0;transform:translateY(10px);animation:pop .5s forwards}
+.chat .bubble:nth-of-type(1){animation-delay:.4s}.chat .bubble:nth-of-type(2){animation-delay:1.4s}.chat .bubble:nth-of-type(3){animation-delay:2.4s}
+@keyframes pop{to{opacity:1;transform:none}}
+.badge{position:absolute;right:-12px;top:-14px;background:var(--ink);color:#fff;border-radius:999px;padding:.4rem 1rem;font-size:.85rem;font-weight:700;transform:rotate(4deg)}
+
+/* sections */
+section{padding:6rem 0}
+.sec-head{margin-bottom:3rem}
+.sec-head.center{text-align:center}.sec-head.center p{margin-inline:auto}
+.sec-head p{color:var(--muted);font-size:1.15rem}
+.alt{background:var(--sand)}
+
+/* sliding panels */
+.slider{overflow:hidden;padding:.6rem 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.track{display:flex;gap:1.1rem;width:max-content;animation:left 45s linear infinite}
+.slider.rev .track{animation-name:right;animation-duration:55s}
+.slider:hover .track{animation-play-state:paused}
+@keyframes left{to{transform:translateX(-50%)}}
+@keyframes right{from{transform:translateX(-50%)}to{transform:none}}
+.word{width:230px;flex:none;border-radius:22px;padding:1.4rem;background:var(--coral);color:#fff}
+.word:nth-child(4n+2){background:var(--ink)}
+.word:nth-child(4n+3){background:var(--peach);color:var(--ink)}
+.word:nth-child(4n+4){background:#fff;color:var(--ink);border:1.5px solid var(--line)}
+.word b{display:block;font-family:var(--display);font-size:2rem;line-height:1.1;margin-bottom:.5rem}
+.word i{display:block;font-style:normal;opacity:.85;font-size:.95rem}
+.word span{display:inline-block;margin-top:.8rem;font-size:.82rem;font-weight:700;background:rgba(255,255,255,.2);padding:.15rem .7rem;border-radius:999px}
+.word:nth-child(4n+3) span,.word:nth-child(4n+4) span{background:var(--sand)}
+.way{width:320px;flex:none;border-radius:22px;padding:1.6rem;background:#fff;border:1.5px solid var(--line)}
+.way .ico{display:grid;place-items:center;width:48px;height:48px;border-radius:14px;background:var(--peach);font-family:var(--display);font-weight:800;color:var(--coral-dark);font-size:1.4rem;margin-bottom:1rem}
+.way p{color:var(--muted);font-size:.98rem}
+.slider-label{margin:2.4rem 0 .6rem;font-family:var(--display);font-weight:700;font-size:1.15rem}
+
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:1.1rem}
+.tile{border-radius:var(--radius);padding:2rem;min-height:250px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
+.tile p{opacity:.9;font-size:1rem}
+.t1{grid-column:span 4;background:var(--coral);color:#fff}
+.t2{grid-column:span 2;background:var(--ink);color:#fff}
+.t3{grid-column:span 2;background:var(--peach)}
+.t4{grid-column:span 4;background:#fff;border:1.5px solid var(--line)}
+.tile .big{position:absolute;right:1.4rem;top:.4rem;font-family:var(--display);font-weight:800;font-size:7.5rem;line-height:1;opacity:.18}
+.t4 .big{color:var(--coral);opacity:.25}
+
+/* steps */
+.step-row{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;padding:3.2rem 0}
+.step-row+.step-row{border-top:1px solid var(--line)}
+.step-row:nth-child(even) .step-text{order:2}
+.num{display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:var(--coral);color:#fff;font-family:var(--display);font-weight:800;font-size:1.6rem;margin-bottom:1.2rem}
+.step-text p{color:var(--muted);margin-bottom:1.5rem}
+.mock{background:var(--sand);border-radius:var(--radius);padding:1.8rem;display:grid;gap:.9rem}
+.mock .card{background:#fff;border-radius:16px;padding:1rem 1.2rem;box-shadow:0 8px 24px rgba(23,23,28,.07);display:flex;justify-content:space-between;align-items:center;gap:1rem;font-weight:500}
+.pbar{height:10px;border-radius:10px;background:var(--line);overflow:hidden}
+.pbar i{display:block;height:100%;width:50%;background:var(--coral);border-radius:10px}
+.pill{background:var(--peach);color:var(--coral-dark);font-weight:700;font-size:.85rem;padding:.25rem .8rem;border-radius:999px;white-space:nowrap}
+.slot{border:2px solid var(--line);background:#fff;border-radius:14px;padding:.9rem 1.2rem;display:flex;justify-content:space-between;font-weight:700}
+.slot.on{border-color:var(--coral);background:var(--peach)}
+
+/* free courses banner */
+.banner{background:var(--coral);color:#fff;border-radius:36px;padding:4rem;display:grid;grid-template-columns:1.3fr .7fr;gap:2rem;align-items:center;position:relative;overflow:hidden}
+.banner p{color:#fff;opacity:.92;margin-bottom:1.6rem}
+.banner .g{font-family:var(--display);font-weight:800;font-size:9rem;line-height:1;opacity:.25;text-align:center}
+.banner h2{color:#fff}
+
+/* faq */
+.faq details{border-bottom:1px solid var(--line);padding:1.3rem 0}
+.faq summary{cursor:pointer;font-family:var(--display);font-weight:700;font-size:1.25rem;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.8rem;line-height:1;color:var(--coral);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{margin-top:.8rem;color:var(--muted)}
+
+/* contact */
+.contact{background:var(--ink);color:#fff}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start}
+.contact p{color:#CFCFD6}
+.checks{list-style:none;margin:1.4rem 0 2rem}
+.checks li{padding-left:2rem;position:relative;margin-bottom:.7rem}
+.checks li::before{content:"";position:absolute;left:0;top:.45em;width:1.1rem;height:1.1rem;border-radius:50%;background:var(--coral)}
+.checks li::after{content:"";position:absolute;left:.37rem;top:.62em;width:.35rem;height:.6rem;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+form{background:#fff;color:var(--ink);padding:2rem;border-radius:28px;display:grid;gap:1.1rem}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+label{display:grid;gap:.35rem;font-weight:700;font-size:.92rem}
+input,select,textarea{font:inherit;font-weight:400;padding:.8rem 1rem;border:1.5px solid var(--line);border-radius:12px;background:var(--sand);color:var(--ink);width:100%}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--coral);background:#fff}
+textarea{min-height:100px;resize:vertical}
+.hp{position:absolute;left:-9999px}
+#form-status{font-weight:700;min-height:1.4em}
+#form-status.ok{color:#1E8A55}#form-status.err{color:#C0392B}
+.fine{font-size:.82rem;color:var(--muted)!important}
+
+footer{background:#0E0E12;color:#A9A9B3;padding:3rem 0;font-size:.95rem}
+footer .wrap{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+footer a{color:#E4E4EA}
+footer ul{list-style:none;display:flex;gap:1.4rem;flex-wrap:wrap}
+
+/* courses page */
+.page-hero{background:linear-gradient(180deg,var(--peach),#fff);padding:4.5rem 0 3rem}
+.page-hero p{color:var(--muted);font-size:1.2rem;margin-top:1rem}
+.toc{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:2rem}
+.toc a{background:#fff;border:1.5px solid var(--line);color:var(--ink);padding:.5rem 1rem;border-radius:999px;font-weight:500;font-size:.95rem}
+.toc a:hover{background:var(--coral);border-color:var(--coral);color:#fff;text-decoration:none}
+.lesson{padding:4rem 0;border-bottom:1px solid var(--line)}
+.lesson:nth-of-type(even){background:var(--sand)}
+.lesson .meta{display:flex;gap:.6rem;margin-bottom:1rem;flex-wrap:wrap}
+.lesson .intro{color:var(--muted);margin-bottom:2rem}
+.tag{display:inline-block;font-size:.82rem;font-weight:700;background:var(--peach);color:var(--coral-dark);padding:.2rem .7rem;border-radius:999px}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+th,td{text-align:left;padding:.85rem 1.1rem;border-bottom:1px solid var(--line)}
+th{background:var(--peach);font-family:var(--display);font-size:.95rem}
+td.gr{font-family:var(--display);font-weight:700;font-size:1.25rem;color:var(--coral-dark)}
+tr:last-child td{border-bottom:0}
+.table-scroll{overflow-x:auto}
+.tip{margin-top:1.5rem;background:var(--peach);border-left:5px solid var(--coral);padding:1rem 1.3rem;border-radius:0 14px 14px 0;max-width:70ch}
+.cta-band{background:var(--coral);color:#fff;text-align:center;padding:4.5rem 0}
+.cta-band h2{color:#fff}
+.cta-band p{margin:0 auto 1.8rem;color:#fff;opacity:.92}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:900px){
+  .hero .wrap,.split,.step-row,.banner{grid-template-columns:1fr}
+  .step-row:nth-child(even) .step-text{order:0}
+  .step-row{gap:2rem}
+  .bento{grid-template-columns:1fr}
+  .t1,.t2,.t3,.t4{grid-column:auto;min-height:200px}
+  .row{grid-template-columns:1fr}
+  .banner{padding:2.5rem}.banner .g{display:none}
+  .menu-btn{display:block}
+  .nav ul{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;flex-direction:column;padding:1.5rem;gap:1.2rem;border-bottom:1px solid var(--line)}
+  .nav ul.open{display:flex}
+  section{padding:4rem 0}
+  .badge{right:8px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal,.chat .bubble{opacity:1;transform:none}
+  .slider{overflow-x:auto;-webkit-mask-image:none;mask-image:none}
+  html{scroll-behavior:auto}
+}
+
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Alphabeta","url":"https://YOUR-USERNAME.github.io/alphabeta/","description":"Native Greek tutors and free Greek lessons for English speakers.","knowsLanguage":["en","el"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Are the Greek courses really free?","acceptedAnswer":{"@type":"Answer","text":"Yes. The beginner courses are free to read and practise. One-to-one lessons with a tutor are optional."}},
+{"@type":"Question","name":"I have never studied Greek. Where do I start?","acceptedAnswer":{"@type":"Answer","text":"Start with the free course. The first lesson teaches the Greek alphabet and takes about an hour."}},
+{"@type":"Question","name":"How does tutor matching work?","acceptedAnswer":{"@type":"Answer","text":"Fill in the short form with your level, goals, timezone and availability. We email you with a matched tutor and trial lesson times."}},
+{"@type":"Question","name":"Is Greek hard for English speakers?","acceptedAnswer":{"@type":"Answer","text":"Greek has a new alphabet and grammar cases, but pronunciation is consistent and thousands of English words come from Greek."}},
+{"@type":"Question","name":"Can I learn Greek just for travel?","acceptedAnswer":{"@type":"Answer","text":"Yes. Tell us your goal in the form and your tutor will focus on practical Greek for travel and daily life."}}
+]}
+</script>
+</head>
+<body>
+<div id="progress" aria-hidden="true"></div>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav"><div class="wrap">
+<a class="logo" href="index.html" aria-label="Alphabeta home">Alpha<span>beta</span></a>
+<button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">☰</button>
+<nav aria-label="Main"><ul>
+<li><a href="courses.html">Free courses</a></li>
+<li><a href="blog/">Blog</a></li>
+<li><a href="#ways">Ways to learn</a></li>
+<li><a href="#how">How it works</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a class="btn" href="#contact">Find a tutor</a></li>
+</ul></nav></div></header>
+
+<main id="main">
+<section class="hero" aria-labelledby="hero-title"><div class="wrap">
+  <div>
+    <h1 id="hero-title">Get talking in Greek with a real tutor.</h1>
+    <p class="lead">Start with free lessons. Then tell us your level, goals and timezone, and we match you with a native Greek tutor.</p>
+    <div class="hero-cta">
+      <a class="btn" href="#contact">Find my tutor</a>
+      <a class="btn ghost" href="courses.html">Try the free course</a>
+    </div>
+    <p class="hero-note">Free to start. No card needed.</p>
+  </div>
+  <div class="chat" aria-label="Example conversation with a tutor">
+    <span class="badge">Native speakers</span>
+    <div class="chat-head"><div class="avatar">Ελ</div><div><b>Your Greek tutor</b><small>Native speaker, online now</small></div></div>
+    <div class="bubble me">Hi! I'm moving to Greece in spring and I only know hello.</div>
+    <div class="bubble tutor"><b>Γεια σου!</b><br>Perfect, we start with the words you will use on day one. Which days work for you?</div>
+    <div class="bubble me">Tuesday and Thursday evenings, GMT.</div>
+  </div>
+</div></section>
+
+<section class="alt" id="ways" aria-labelledby="ways-title">
+  <div class="wrap sec-head center reveal">
+    <h2 id="ways-title">Greek, your way</h2>
+    <p>Pick the words you want to say and the way you want to learn them. Your tutor builds lessons around you.</p>
+  </div>
+  <div class="slider" aria-label="Greek words"><div class="track"><div class="word"><b>Καλημέρα</b><i>Kalimera</i><span>Good morning</span></div><div class="word"><b>Φίλος</b><i>Filos</i><span>Friend</span></div><div class="word"><b>Θάλασσα</b><i>Thalassa</i><span>Sea</span></div><div class="word"><b>Καφές</b><i>Kafes</i><span>Coffee</span></div><div class="word"><b>Ευχαριστώ</b><i>Efharisto</i><span>Thank you</span></div><div class="word"><b>Αγάπη</b><i>Agapi</i><span>Love</span></div><div class="word"><b>Ταξίδι</b><i>Taxidi</i><span>Trip</span></div><div class="word"><b>Ήλιος</b><i>Ilios</i><span>Sun</span></div><div class="word"><b>Μουσική</b><i>Mousiki</i><span>Music</span></div><div class="word"><b>Σπίτι</b><i>Spiti</i><span>Home</span></div></div></div>
+  <div class="slider rev" style="margin-top:1.1rem" aria-label="Ways to learn Greek"><div class="track"><div class="way"><div class="ico">Α</div><h3>Alphabet and reading</h3><p>Learn to read Greek in days and decode every sign and menu.</p></div><div class="way"><div class="ico">Ω</div><h3>Conversation practice</h3><p>Speak from lesson one with a native tutor who keeps it relaxed.</p></div><div class="way"><div class="ico">Π</div><h3>Pronunciation coaching</h3><p>Fix the sounds English speakers find tricky, like γ, χ and θ.</p></div><div class="way"><div class="ico">Τ</div><h3>Travel Greek</h3><p>Order, ask, bargain and chat on your next trip.</p></div><div class="way"><div class="ico">Φ</div><h3>Family and heritage</h3><p>Talk with grandparents, cousins and relatives in their language.</p></div><div class="way"><div class="ico">Ε</div><h3>Exam preparation</h3><p>Prepare for the Greek state certificate with a clear plan.</p></div><div class="way"><div class="ico">Μ</div><h3>Music and culture</h3><p>Learn through songs, films and everyday Greek life.</p></div><div class="way"><div class="ico">Δ</div><h3>Greek for work</h3><p>Emails, meetings and small talk for professionals.</p></div></div></div>
+</section>
+
+<section aria-labelledby="why-title"><div class="wrap">
+  <div class="sec-head reveal"><h2 id="why-title">Built around real conversations</h2><p>No endless apps and no one-size-fits-all textbook.</p></div>
+  <div class="bento">
+    <div class="tile t1 reveal"><span class="big" aria-hidden="true">Αα</span><h3>Native Greek tutors</h3><p>Learn how Greek is really spoken, with natural pronunciation and everyday phrases from the first lesson.</p></div>
+    <div class="tile t2 reveal"><span class="big" aria-hidden="true">Ώρα</span><h3>Any timezone</h3><p>Tell us when you are free. We find lesson times that fit your week.</p></div>
+    <div class="tile t3 reveal"><span class="big" aria-hidden="true">Στόχος</span><h3>Goals first</h3><p>Travel, family, exams or work. Your goal shapes every lesson.</p></div>
+    <div class="tile t4 reveal"><span class="big" aria-hidden="true">Δωρεάν</span><h3>Free to begin</h3><p>Our beginner course costs nothing. Learn the basics at your own pace, then add a tutor when you are ready.</p></div>
+  </div>
+</div></section>
+
+<section class="alt" id="how" aria-labelledby="how-title"><div class="wrap">
+  <div class="sec-head center reveal"><h2 id="how-title">Three steps to your first lesson</h2><p>Simple, in this order.</p></div>
+
+  <div class="step-row">
+    <div class="step-text reveal"><div class="num">1</div><h3>Do the free course</h3><p>Open the free course and work through the short lessons at your own speed. You will learn the alphabet, key phrases and how Greek sounds. Most people finish the first lesson in an hour.</p><a class="btn" href="courses.html">Open the free course</a></div>
+    <div class="mock reveal" aria-hidden="true">
+      <div class="card"><span>Your progress</span><span class="pill">3 of 6 lessons</span></div>
+      <div class="pbar"><i></i></div>
+      <div class="card"><span>Pronunciation guide</span><span class="pill">Included</span></div>
+      <div class="card"><span>Lessons take</span><span class="pill">20-30 min</span></div>
+    </div>
+  </div>
+
+  <div class="step-row">
+    <div class="step-text reveal"><div class="num">2</div><h3>Tell us your goals</h3><p>Fill in the short form: your level, why you want Greek, your timezone and when you are free. It takes about two minutes, and there is no commitment.</p><a class="btn" href="#contact">Go to the form</a></div>
+    <div class="mock reveal" aria-hidden="true">
+      <div class="card"><span>Level</span><span class="pill">Beginner</span></div>
+      <div class="card"><span>Goal</span><span class="pill">Living in Greece</span></div>
+      <div class="card"><span>Timezone</span><span class="pill">Auto-detected</span></div>
+      <div class="card"><span>Availability</span><span class="pill">Weekday evenings</span></div>
+    </div>
+  </div>
+
+  <div class="step-row">
+    <div class="step-text reveal"><div class="num">3</div><h3>Meet and book your tutor</h3><p>We email you with a tutor who fits your goals and a few trial lesson times. Pick one, show up, and start speaking Greek.</p><a class="btn dark" href="#contact">Start now</a></div>
+    <div class="mock reveal" aria-hidden="true">
+      <div class="slot on"><span>Tuesday</span><span>18:00</span></div>
+      <div class="slot"><span>Thursday</span><span>19:30</span></div>
+      <div class="slot"><span>Saturday</span><span>10:00</span></div>
+      <div class="card"><span>Trial lesson with your tutor</span><span class="pill">Confirmed by email</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section aria-labelledby="free-title"><div class="wrap">
+  <div class="banner reveal">
+    <div><h2 id="free-title">Free Greek courses</h2><p>Learn the basics before you book anything. Short lessons, clear pronunciation, real phrases. They live on their own page so you can come back any time.</p><a class="btn sun" href="courses.html">Go to the free courses</a></div>
+    <div class="g" aria-hidden="true">Γειά</div>
+  </div>
+</div></section>
+
+<section aria-labelledby="blog-title"><div class="wrap"><div class="sec-head reveal"><h2 id="blog-title">Learn more about Greek</h2><p>Guides and tips from the Alphabeta blog.</p></div><div class="post-cards"><a class="post-card reveal" href="blog/is-greek-hard-for-english-speakers.html"><div class="glyph">Αβ</div><h3>Is Greek Hard for English Speakers? An Honest Answer</h3><p>An honest look at what is easy and what is tricky when English speakers learn Greek, plus tips to make progress faster.</p><span class="more">Read article →</span></a><a class="post-card reveal" href="blog/learn-the-greek-alphabet.html"><div class="glyph">Αλφ</div><h3>How to Learn the Greek Alphabet in One Weekend</h3><p>A simple plan to learn all 24 Greek letters, the sounds English speakers find tricky and the common letter pairs.</p><span class="more">Read article →</span></a><a class="post-card reveal" href="blog/greek-phrases-for-travel.html"><div class="glyph">Γεια</div><h3>10 Greek Phrases to Learn Before You Travel</h3><p>Ten essential Greek phrases with pronunciation for visitors to Greece and Cyprus: greetings, ordering, directions and thanks.</p><span class="more">Read article →</span></a></div></div></section>
+
+<section class="alt faq" id="faq" aria-labelledby="faq-title"><div class="wrap">
+  <div class="sec-head reveal"><h2 id="faq-title">Questions about learning Greek</h2></div>
+  <details><summary>Are the Greek courses really free?</summary><p>Yes. The beginner courses are free to read and practise. One-to-one lessons with a tutor are optional.</p></details>
+  <details><summary>I have never studied Greek. Where do I start?</summary><p>Start with the free course. The first lesson teaches the Greek alphabet and takes about an hour.</p></details>
+  <details><summary>How does tutor matching work?</summary><p>Fill in the short form with your level, goals, timezone and availability. We email you with a matched tutor and trial lesson times.</p></details>
+  <details><summary>Is Greek hard for English speakers?</summary><p>Greek has a new alphabet and grammar cases, but pronunciation is consistent and thousands of English words come from Greek, so many learners progress faster than expected.</p></details>
+  <details><summary>Can I learn Greek just for travel?</summary><p>Yes. Tell us your goal in the form and your tutor will focus on practical Greek for travel and daily life.</p></details>
+</div></section>
+
+<section class="contact" id="contact" aria-labelledby="contact-title"><div class="wrap split">
+  <div class="reveal">
+    <h2 id="contact-title">Find your Greek tutor</h2>
+    <p>Tell us a little about you. We reply by email with a tutor match and times for a trial lesson.</p>
+    <ul class="checks"><li>Native Greek tutors</li><li>Lesson times that suit your timezone</li><li>Beginner to advanced</li></ul>
+  </div>
+  <form id="lesson-form" class="reveal" action="https://api.web3forms.com/submit" method="POST">
+    <!-- Replace with your key from https://web3forms.com -->
+    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+    <input type="hidden" name="subject" value="New Greek lesson request - Alphabeta">
+    <input type="hidden" name="from_name" value="Alphabeta website">
+    <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+    <div class="row">
+      <label>Your name<input type="text" name="name" required autocomplete="name"></label>
+      <label>Email<input type="email" name="email" required autocomplete="email"></label>
+    </div>
+    <div class="row">
+      <label>Your Greek level<select name="level" required><option value="" disabled selected>Choose one</option><option>Complete beginner</option><option>Beginner (A1)</option><option>Elementary (A2)</option><option>Intermediate (B1-B2)</option><option>Advanced (C1+)</option></select></label>
+      <label>Main goal<select name="goal" required><option value="" disabled selected>Choose one</option><option>Travel</option><option>Family or heritage</option><option>Living in Greece or Cyprus</option><option>Work or study</option><option>Certification (e.g. Greek state certificate)</option><option>Just for fun</option></select></label>
+    </div>
+    <label>Tell us more about your goals<textarea name="message" placeholder="For example: I want to talk with my grandparents in Greek."></textarea></label>
+    <div class="row">
+      <label>Your timezone<input type="text" id="timezone" name="timezone" placeholder="e.g. America/New_York" required></label>
+      <label>Lessons per week<select name="frequency"><option>1</option><option>2</option><option>3 or more</option><option>Not sure yet</option></select></label>
+    </div>
+    <label>When are you available?<textarea name="availability" placeholder="For example: weekday evenings 18:00-21:00, Saturday mornings" required></textarea></label>
+    <button class="btn" type="submit">Send my request</button>
+    <p id="form-status" role="status" aria-live="polite"></p>
+    <p class="fine">We only use your details to match you with a tutor. No spam.</p>
+  </form>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+<div><a class="logo" style="color:#fff" href="index.html">Alpha<span>beta</span></a><p style="margin-top:.5rem">Learn Greek with free lessons and real tutors.</p></div>
+<ul><li><a href="courses.html">Free courses</a></li><li><a href="#ways">Ways to learn</a></li><li><a href="#faq">FAQ</a></li><li><a href="blog/">Blog</a></li><li><a href="#contact">Find a tutor</a></li><li><a href="privacy.html">Privacy</a></li></ul>
+<p>© <span id="y">2026</span> Alphabeta</p></div></footer>
+<script>
+// Mobile menu
+const menuBtn=document.querySelector('.menu-btn'),menu=document.querySelector('.nav ul');
+if(menuBtn){menuBtn.addEventListener('click',()=>{const o=menu.classList.toggle('open');menuBtn.setAttribute('aria-expanded',o)});
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')))}
+
+// Nav border + scroll progress bar
+const nav=document.querySelector('.nav'),bar=document.getElementById('progress');
+function onScroll(){nav.classList.toggle('scrolled',scrollY>10);
+  if(bar){const h=document.documentElement.scrollHeight-innerHeight;bar.style.width=(h>0?scrollY/h*100:0)+'%'}}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+// Scroll reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// Sliding panels: duplicate content once for a seamless loop
+document.querySelectorAll('.track').forEach(t=>{
+  const clones=[...t.children].map(c=>{const n=c.cloneNode(true);n.setAttribute('aria-hidden','true');return n});
+  clones.forEach(c=>t.appendChild(c))});
+
+// Timezone auto-detect
+const tz=document.getElementById('timezone');
+function setTz(){try{tz.value=Intl.DateTimeFormat().resolvedOptions().timeZone}catch(_){}}
+if(tz)setTz();
+const y=document.getElementById('y');if(y)y.textContent=new Date().getFullYear();
+
+// Web3Forms submit
+const form=document.getElementById('lesson-form');
+if(form){form.addEventListener('submit',async ev=>{
+  ev.preventDefault();
+  const status=document.getElementById('form-status'),btn=form.querySelector('button[type=submit]');
+  status.className='';status.textContent='Sending…';btn.disabled=true;
+  try{
+    const res=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)});
+    const data=await res.json();
+    if(data.success){status.className='ok';status.textContent='Thank you! We will email you within 48 hours to match you with a tutor.';form.reset();setTz()}
+    else{status.className='err';status.textContent=data.message||'Something went wrong. Please try again.'}
+  }catch(_){status.className='err';status.textContent='Network error. Please check your connection and try again.'}
+  btn.disabled=false})}
+
+</script>
+</body>
+</html>
