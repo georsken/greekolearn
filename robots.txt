@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://georsken.github.io/greekolearn/sitemap.xml
+Sitemap: https://www.greekolearn.com/sitemap.xml
