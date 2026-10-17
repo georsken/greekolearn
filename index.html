@@ -6,13 +6,13 @@
 <title>Learn Greek Online: Native Greek Tutors + Free Lessons | GreekoLearn</title>
 <meta name="description" content="Learn Greek online with native Greek tutors and free beginner lessons. Share your level, goals and timezone and get matched for one-to-one lessons.">
 <meta name="keywords" content="learn Greek, Greek tutor, online Greek lessons, Greek classes for English speakers, learn Greek for beginners, Greek language course">
-<link rel="canonical" href="https://YOUR-USERNAME.github.io/greekolearn/">
+<link rel="canonical" href="https://georsken.github.io/greekolearn/">
 <meta name="theme-color" content="#EB6345">
 <meta property="og:type" content="website">
 <meta property="og:title" content="GreekoLearn: learn Greek with native tutors and free lessons">
 <meta property="og:description" content="Free Greek lessons for English speakers, plus one-to-one tutors matched to your goals and timezone.">
-<meta property="og:url" content="https://YOUR-USERNAME.github.io/greekolearn/">
-<meta property="og:image" content="https://YOUR-USERNAME.github.io/greekolearn/og-image.png">
+<meta property="og:url" content="https://georsken.github.io/greekolearn/">
+<meta property="og:image" content="https://georsken.github.io/greekolearn/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%23EB6345'/><text x='50' y='72' font-size='64' font-weight='800' text-anchor='middle' fill='white' font-family='sans-serif'>Α</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -114,6 +114,7 @@ section{padding:6rem 0}
 .t4{grid-column:span 4;background:#fff;border:1.5px solid var(--line)}
 .tile .big{position:absolute;right:1.4rem;top:.4rem;font-family:var(--display);font-weight:800;font-size:7.5rem;line-height:1;opacity:.18}
 .t4 .big{color:var(--coral);opacity:.25}
+.t2 .big,.t3 .big{font-size:3.6rem;white-space:nowrap}
 
 /* steps */
 .step-row{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;padding:3.2rem 0}
@@ -223,7 +224,7 @@ tr:last-child td{border-bottom:0}
 @media(max-width:900px){.post-cards{grid-template-columns:1fr}}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"EducationalOrganization","name":"GreekoLearn","url":"https://YOUR-USERNAME.github.io/greekolearn/","description":"Native Greek tutors and free Greek lessons for English speakers.","knowsLanguage":["en","el"]}
+{"@context":"https://schema.org","@type":"EducationalOrganization","name":"GreekoLearn","url":"https://georsken.github.io/greekolearn/","description":"Native Greek tutors and free Greek lessons for English speakers.","knowsLanguage":["en","el"]}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
@@ -352,8 +353,8 @@ tr:last-child td{border-bottom:0}
     <ul class="checks"><li>Native Greek tutors</li><li>Lesson times that suit your timezone</li><li>Beginner to advanced</li></ul>
   </div>
   <form id="lesson-form" class="reveal" action="https://api.web3forms.com/submit" method="POST">
-    <!-- Replace with your key from https://web3forms.com -->
-    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+    <!-- STEP: paste your Web3Forms access key below (free at https://web3forms.com). It is safe to be public. -->
+    <input type="hidden" name="access_key" value="630fbda3-c4a9-49c9-929c-48eb5e966803">
     <input type="hidden" name="subject" value="New Greek lesson request - GreekoLearn">
     <input type="hidden" name="from_name" value="GreekoLearn website">
     <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
@@ -415,6 +416,7 @@ if(form){form.addEventListener('submit',async ev=>{
   ev.preventDefault();
   const status=document.getElementById('form-status'),btn=form.querySelector('button[type=submit]');
   status.className='';status.textContent='Sending…';btn.disabled=true;
+  if(/YOUR_WEB3FORMS/.test(form.access_key.value)){status.className='err';status.textContent='Form is not set up yet: add your Web3Forms access key in index.html.';btn.disabled=false;return}
   try{
     const res=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)});
     const data=await res.json();
